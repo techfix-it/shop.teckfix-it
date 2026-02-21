@@ -1,0 +1,473 @@
+/* Order Tracking Specific Styles */
+.tracking-header {
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+.tracking-title {
+  font-size: 1.875rem;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  margin-bottom: 0.5rem;
+}
+
+.tracking-subtitle {
+  color: var(--text-500);
+  margin-bottom: 1.5rem;
+}
+
+.tracking-search-bar {
+  max-width: 36rem;
+  margin: 0 auto;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.tracking-search-input {
+  flex: 1;
+  position: relative;
+}
+
+.tracking-search-input .material-symbols-outlined {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-400);
+}
+
+.tracking-search-input input {
+  width: 100%;
+  padding: 0.75rem 1rem 0.75rem 3rem;
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--border-200);
+  background-color: var(--bg-white);
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.2s;
+}
+
+.tracking-search-input input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px rgba(236, 91, 19, 0.2);
+}
+
+.btn-track {
+  background-color: var(--primary);
+  color: white;
+  font-weight: 700;
+  padding: 0.75rem 2rem;
+  border-radius: var(--radius-xl);
+  box-shadow: 0 4px 14px 0 rgba(236, 91, 19, 0.39);
+  transition: all 0.2s;
+}
+
+.btn-track:hover {
+  background-color: var(--primary-hover);
+}
+
+/* Tracking Card */
+.tracking-card {
+  background-color: var(--bg-white);
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--border-200);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+.tracking-card-header {
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--border-200);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.tracking-status-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-400);
+  display: block;
+}
+
+.tracking-status-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin: 0.25rem 0;
+}
+
+.tracking-status-desc {
+  font-size: 0.875rem;
+  color: var(--text-500);
+}
+
+.tracking-est-value {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0.25rem 0;
+}
+
+.tracking-est-time {
+  font-size: 0.875rem;
+  color: #2563eb; /* secondary */
+  font-weight: 500;
+}
+
+/* Timeline */
+.tracking-timeline {
+  padding: 2rem;
+}
+
+.timeline-track {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.timeline-bg {
+  position: absolute;
+  top: 1.25rem;
+  left: 0;
+  width: 100%;
+  height: 0.25rem;
+  background-color: var(--bg-100);
+  border-radius: 9999px;
+}
+
+.timeline-progress {
+  position: absolute;
+  top: 1.25rem;
+  left: 0;
+  width: 60%; /* Active Progress */
+  height: 0.25rem;
+  background-color: var(--primary);
+  border-radius: 9999px;
+  transition: all 0.5s;
+}
+
+.timeline-step {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.timeline-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+  background-color: var(--bg-100);
+  color: var(--text-400);
+}
+
+.timeline-icon.active {
+  background-color: var(--primary);
+  color: white;
+  box-shadow: 0 4px 14px 0 rgba(236, 91, 19, 0.39);
+}
+
+.timeline-icon.current {
+  background-color: var(--primary);
+  color: white;
+  box-shadow: 0 4px 14px 0 rgba(236, 91, 19, 0.39);
+  box-shadow: 0 0 0 4px rgba(236, 91, 19, 0.2);
+}
+
+.timeline-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--text-400);
+}
+
+.timeline-step.active .timeline-label {
+  color: var(--text-900);
+}
+
+.timeline-step.current .timeline-label {
+  color: var(--primary);
+}
+
+/* Layout Grid */
+.tracking-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 1024px) {
+  .tracking-grid {
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+/* History List */
+.history-section-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.history-section-title .material-symbols-outlined {
+  color: #2563eb; /* secondary */
+}
+
+.history-card {
+  background-color: var(--bg-white);
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--border-200);
+  overflow: hidden;
+}
+
+.history-item {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  border-bottom: 1px solid var(--border-200);
+}
+
+.history-item:last-child {
+  border-bottom: none;
+}
+
+.history-time {
+  min-width: 6.25rem;
+  text-align: right;
+}
+
+.history-date {
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+.history-hour {
+  font-size: 0.75rem;
+  color: var(--text-500);
+}
+
+.history-node {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.node-dot {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  background-color: var(--bg-100);
+  margin-top: 0.375rem;
+}
+
+.node-dot.active {
+  background-color: var(--primary);
+  box-shadow: 0 0 0 4px rgba(236, 91, 19, 0.1);
+}
+
+.node-line {
+  width: 1px;
+  flex: 1;
+  background-color: var(--border-200);
+  margin: 0.5rem 0;
+}
+
+.history-details p {
+  font-size: 0.875rem;
+}
+
+.history-event {
+  font-weight: 500;
+  color: var(--text-700);
+}
+
+.history-item.primary .history-event {
+  font-weight: 700;
+  color: var(--text-900);
+}
+
+.history-location {
+  font-size: 0.75rem !important;
+  color: var(--text-500);
+}
+
+/* Sidebar Info */
+.info-card {
+  background-color: var(--bg-white);
+  padding: 1.5rem;
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--border-200);
+  margin-bottom: 1.5rem;
+}
+
+.info-card-title {
+  font-weight: 700;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.info-card-title .material-symbols-outlined {
+  color: #2563eb; /* secondary */
+  font-size: 1.125rem;
+}
+
+.address-details {
+  font-size: 0.875rem;
+  color: var(--text-500);
+  line-height: 1.5;
+}
+
+.address-name {
+  font-weight: 700;
+  color: var(--text-900);
+}
+
+/* Support Box */
+.support-box {
+  background-color: var(--border-primary-10);
+  padding: 1.5rem;
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--border-primary-20);
+  margin-bottom: 1.5rem;
+}
+
+.support-title {
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+.support-desc {
+  font-size: 0.875rem;
+  color: var(--text-500);
+  margin-bottom: 1rem;
+}
+
+.btn-support {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.625rem;
+  border-radius: var(--radius-lg);
+  font-size: 0.875rem;
+  font-weight: 700;
+  background-color: var(--primary);
+  color: white;
+  margin-bottom: 0.5rem;
+  transition: all 0.2s;
+}
+
+.btn-support:hover {
+  background-color: var(--primary-hover);
+}
+
+.btn-outline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.625rem;
+  border-radius: var(--radius-lg);
+  font-size: 0.875rem;
+  font-weight: 700;
+  background-color: var(--bg-white);
+  color: var(--text-900);
+  border: 1px solid var(--border-200);
+  transition: all 0.2s;
+}
+
+.btn-outline:hover {
+  background-color: var(--bg-50);
+}
+
+/* Ad Box */
+.promo-box {
+  position: relative;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  aspect-ratio: 4/5;
+  cursor: pointer;
+}
+
+.promo-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.promo-box:hover .promo-image {
+  transform: scale(1.05);
+}
+
+.promo-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1rem;
+}
+
+.promo-tag {
+  font-size: 0.625rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+}
+
+.promo-title {
+  color: white;
+  font-weight: 700;
+  font-size: 1.125rem;
+  line-height: 1.25;
+  margin-bottom: 0.25rem;
+}
+
+.promo-desc {
+  color: rgba(255,255,255,0.7);
+  font-size: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.promo-link {
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  transition: gap 0.2s;
+}
+
+.promo-box:hover .promo-link {
+  gap: 0.5rem;
+}
