@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>TechFix-It | QuantumForce Z-1000 Workstation</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec5b13",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#221610",
+                        "techblue": "#1e3a8a", // Consistent with header from user screens
+                        "techblue-dark": "#172554",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Public Sans', sans-serif; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display transition-colors duration-300">
+<!-- Header (Consistent with Blue/White Theme from Screen 5/6) -->
+<header class="bg-techblue text-white sticky top-0 z-50 shadow-md">
+<div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-3xl">memory</span>
+<h2 class="text-xl font-bold tracking-tight">TechFix-It</h2>
+</div>
+<nav class="hidden md:flex items-center gap-6">
+<a class="hover:text-primary transition-colors font-medium" href="#">Home</a>
+<a class="hover:text-primary transition-colors font-medium" href="#">Products</a>
+<a class="hover:text-primary transition-colors font-medium text-primary" href="#">Workstations</a>
+<a class="hover:text-primary transition-colors font-medium" href="#">Support</a>
+</nav>
+</div>
+<div class="flex items-center gap-4 flex-1 justify-end max-w-lg">
+<div class="relative w-full hidden sm:block">
+<input class="w-full bg-techblue-dark border-none rounded-lg py-2 pl-10 pr-4 text-sm focus:ring-2 focus:ring-primary placeholder:text-slate-400" placeholder="Search components..." type="text"/>
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-lg">search</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="p-2 hover:bg-white/10 rounded-lg transition-colors relative">
+<span class="material-symbols-outlined">shopping_cart</span>
+<span class="absolute top-1 right-1 bg-primary text-[10px] w-4 h-4 flex items-center justify-center rounded-full">3</span>
+</button>
+<button class="p-2 hover:bg-white/10 rounded-lg transition-colors">
+<span class="material-symbols-outlined">account_circle</span>
+</button>
+</div>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="max-w-7xl mx-auto px-4 py-8">
+<!-- Breadcrumbs -->
+<nav class="flex items-center gap-2 text-sm text-slate-500 dark:text-slate-400 mb-6">
+<a class="hover:text-primary" href="#">Home</a>
+<span class="material-symbols-outlined text-xs">chevron_right</span>
+<a class="hover:text-primary" href="#">Enterprise</a>
+<span class="material-symbols-outlined text-xs">chevron_right</span>
+<span class="text-slate-900 dark:text-slate-100 font-medium">QuantumForce Z-1000</span>
+</nav>
+<!-- Product Hero Section -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+<!-- Gallery Section -->
+<div class="lg:col-span-7 flex flex-col gap-4">
+<div class="aspect-video bg-white dark:bg-slate-800 rounded-xl overflow-hidden shadow-sm border border-slate-200 dark:border-slate-700 relative group">
+<img alt="High-Performance Workstation Server main view" class="w-full h-full object-cover" data-alt="High performance workstation server chassis front view" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjOgQu-wv0aDvdf5SGZW3fpqvG5xIL9g4uJkEAMVnb-p9lq6D5p1K-J50uHPYuMda97Q2OH6k5FlmCxFJAb_0sucoplYV1h8VMUHslb8af7D9xS0guBPc7h_uLoqrr6VintU8S24iRNLFL8prb7lLVkIxcvBqXyRt7mWMa2krGXYfulJU5VSUnqpfbk7R4lR0Bwi1fjgPTScYMrHi9HnB6gkxPUnkx0_0yGqDrwejT10ljDroo4mBvRkVR5H8B9oYAUnf4bn88AXRv"/>
+<button class="absolute top-4 right-4 bg-white/80 dark:bg-black/50 p-2 rounded-full backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined">fullscreen</span>
+</button>
+</div>
+<div class="grid grid-cols-4 gap-4">
+<div class="aspect-square bg-white dark:bg-slate-800 rounded-lg overflow-hidden border-2 border-primary shadow-sm">
+<img alt="Side view of workstation" class="w-full h-full object-cover" data-alt="Side view of the workstation server" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqrWmLpkSC0BT9S_oz70ysZY3mq0Fu2PVsKot0Vgo6M1XU4tCiBpknlXLMlMl4e8aLxrxRjPhndEu9Ah-SFw9WWqzWsjZsnQ2Wz4hv9sAP3Q0eM52Xc0VwZBVnvUkhxwgb649riA3nb1ljE4IRI_-g96UW9a0FkQxDTm-bAOlxNY2k_D1rv0KKgV2tUo6eeLVv760cdN_cpKKRNRpiV8IedPogcbjD0LoTrPPWUVr0Wlx6Gg2ro7cIEL04m4whQmKdQjRy_vJ7VzLY"/>
+</div>
+<div class="aspect-square bg-white dark:bg-slate-800 rounded-lg overflow-hidden border border-slate-200 dark:border-slate-700 shadow-sm opacity-70 hover:opacity-100 transition-opacity cursor-pointer">
+<img alt="Internal view of components" class="w-full h-full object-cover" data-alt="Internal view of the liquid cooling system" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzqVx2TY3Zi9R-uPskTi9WTxpC7JiIZ-o4lb1Jbq_jvNVh5GGud5npKU7o0NSSSgHfKyj9MscZMFHbFjDlZbiZhadxdDTh58LwgjJrsQAygfgbrGb_qk2dfvpkjyvTBg28MIgj2EM9wzmZntjI3ihnsCxQ64wzMTNP2C0WGnJtrpDTdm4qIDExb3I5hsHPDatBofnyeZHrPJsW0s1dtubApxPptpjNtBxNthyroR2WnzAJKLH0uH3WRRzKmuEe8-NV19mFX2KeynoI"/>
+</div>
+<div class="aspect-square bg-white dark:bg-slate-800 rounded-lg overflow-hidden border border-slate-200 dark:border-slate-700 shadow-sm opacity-70 hover:opacity-100 transition-opacity cursor-pointer">
+<img alt="Rear I/O ports" class="w-full h-full object-cover" data-alt="Rear IO ports of server station" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-2qq8RXVkNZ9nG3weDxU4yOjhHninUPu8YUYXoLiWLOsFhwcSF8VaecCkmDgb-Nu5-p-6QIOY_wsERyBPJdO89GPgmO0lSfBOEncM8dtKhhhDraSlps0S0eZft2fVVVQYQjzocmRE9XjMF366PLTgelFimUbvIj_1G4yHp5LCqnpjpbXP8tueiIo-AbNdlJo96E1OvpAXdzw8erKTs-qFn_WX9J0_XjO00xQ_3JkHF5eIH1xknyLFvLDGNkL9I5-SlUbq_8ZbNbHd"/>
+</div>
+<div class="aspect-square bg-white dark:bg-slate-800 rounded-lg overflow-hidden border border-slate-200 dark:border-slate-700 shadow-sm opacity-70 hover:opacity-100 transition-opacity cursor-pointer relative">
+<img alt="Close up of processor" class="w-full h-full object-cover" data-alt="Close up view of the processor" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFLkTSDil3xCz4c7i82bhejDS5pwNxUuX3OMGrzCC37q8K8--phGrIClXZosf8rmV22HF3bSZE8OK_xOCSUJY4R_PimRD9tgEZZHx3h_MrU7USDBXt70fLdrJ8TB2lL5LPr_XLpLUgmcBwAEKysnPILvRWQDNqC3SQJKkyD9utra7qjq8fmqXZ2SDJ57Fn8Ecy1s4M2epFm-amvZjmUWtKGpCUXjhGnKFWpjDyG32meemWQlOJyg5qqnxgGUocmci3hT0Fn6yB2dRg"/>
+<div class="absolute inset-0 bg-black/40 flex items-center justify-center text-white font-bold">+5</div>
+</div>
+</div>
+</div>
+<!-- Product Info Section -->
+<div class="lg:col-span-5 flex flex-col">
+<div class="mb-4">
+<span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">Top Rated</span>
+</div>
+<h1 class="text-3xl md:text-4xl font-extrabold leading-tight mb-2">QuantumForce Z-1000 Workstation Server</h1>
+<p class="text-slate-600 dark:text-slate-400 mb-6">Master the most demanding creative and scientific workloads with the world's most powerful workstation architecture.</p>
+<div class="flex items-center gap-4 mb-6">
+<div class="flex items-center text-amber-400">
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined">star_half</span>
+</div>
+<span class="text-sm font-medium">(124 Reviews)</span>
+<span class="h-4 w-px bg-slate-300 dark:bg-slate-700"></span>
+<span class="text-sm font-medium text-green-600 flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">check_circle</span> In Stock
+                    </span>
+</div>
+<div class="bg-slate-100 dark:bg-slate-800/50 p-6 rounded-xl mb-8 border border-slate-200 dark:border-slate-700">
+<div class="flex items-baseline gap-3 mb-1">
+<span class="text-4xl font-black text-slate-900 dark:text-slate-100">$4,999.00</span>
+<span class="text-slate-500 line-through text-lg">$5,499.00</span>
+</div>
+<p class="text-sm text-slate-500 dark:text-slate-400 mb-6 italic">Or $416.58/mo for 12 months with TechPay</p>
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-4">
+<div class="flex border border-slate-300 dark:border-slate-600 rounded-lg overflow-hidden">
+<button class="px-3 py-2 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors">-</button>
+<input class="w-12 text-center bg-transparent border-none focus:ring-0 text-sm font-bold" type="number" value="1"/>
+<button class="px-3 py-2 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors">+</button>
+</div>
+<button class="flex-1 border-2 border-primary text-primary hover:bg-primary hover:text-white font-bold py-3 rounded-xl transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-xl">shopping_cart</span>
+                                Add to Cart
+                            </button>
+</div>
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-black py-4 rounded-xl shadow-lg shadow-primary/20 transition-all text-lg">
+                            Buy Now
+                        </button>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="flex items-start gap-3 p-3 border border-slate-200 dark:border-slate-700 rounded-lg">
+<span class="material-symbols-outlined text-primary">local_shipping</span>
+<div>
+<p class="text-sm font-bold">Free Shipping</p>
+<p class="text-xs text-slate-500">Expedited 2-3 day delivery</p>
+</div>
+</div>
+<div class="flex items-start gap-3 p-3 border border-slate-200 dark:border-slate-700 rounded-lg">
+<span class="material-symbols-outlined text-primary">verified_user</span>
+<div>
+<p class="text-sm font-bold">3-Year Warranty</p>
+<p class="text-xs text-slate-500">Next-day onsite support</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Technical Specifications Table -->
+<div class="mt-16">
+<h3 class="text-2xl font-black mb-8 border-b-2 border-primary pb-2 inline-block">Technical Specifications</h3>
+<div class="bg-white dark:bg-slate-800 rounded-xl overflow-hidden shadow-sm border border-slate-200 dark:border-slate-700">
+<table class="w-full text-left border-collapse">
+<tbody>
+<tr class="border-b border-slate-100 dark:border-slate-700">
+<th class="px-6 py-4 bg-slate-50 dark:bg-slate-900/50 font-bold w-1/4 text-slate-500 uppercase text-xs">Processor</th>
+<td class="px-6 py-4">AMD Threadripper™ PRO 5995WX (64 Cores, 128 Threads, Up to 4.5GHz)</td>
+</tr>
+<tr class="border-b border-slate-100 dark:border-slate-700">
+<th class="px-6 py-4 bg-slate-50 dark:bg-slate-900/50 font-bold w-1/4 text-slate-500 uppercase text-xs">Graphics</th>
+<td class="px-6 py-4">Dual NVIDIA RTX™ A6000 (48GB GDDR6 ECC VRAM each) with NVLink</td>
+</tr>
+<tr class="border-b border-slate-100 dark:border-slate-700">
+<th class="px-6 py-4 bg-slate-50 dark:bg-slate-900/50 font-bold w-1/4 text-slate-500 uppercase text-xs">Memory</th>
+<td class="px-6 py-4">256GB (8x32GB) DDR4 3200MHz ECC Registered Memory</td>
+</tr>
+<tr class="border-b border-slate-100 dark:border-slate-700">
+<th class="px-6 py-4 bg-slate-50 dark:bg-slate-900/50 font-bold w-1/4 text-slate-500 uppercase text-xs">Storage</th>
+<td class="px-6 py-4">4TB NVMe PCIe Gen4 M.2 SSD + 12TB 7200RPM Enterprise SATA HDD</td>
+</tr>
+<tr class="border-b border-slate-100 dark:border-slate-700">
+<th class="px-6 py-4 bg-slate-50 dark:bg-slate-900/50 font-bold w-1/4 text-slate-500 uppercase text-xs">Network</th>
+<td class="px-6 py-4">Dual 10GbE SFP+ Ports + Intel Wi-Fi 6E AX210 with Bluetooth 5.3</td>
+</tr>
+<tr class="border-b border-slate-100 dark:border-slate-700">
+<th class="px-6 py-4 bg-slate-50 dark:bg-slate-900/50 font-bold w-1/4 text-slate-500 uppercase text-xs">Power Supply</th>
+<td class="px-6 py-4">1600W 80+ Titanium Certified Fully Modular PSU</td>
+</tr>
+<tr>
+<th class="px-6 py-4 bg-slate-50 dark:bg-slate-900/50 font-bold w-1/4 text-slate-500 uppercase text-xs">Operating System</th>
+<td class="px-6 py-4">Windows 11 Pro for Workstations / Ubuntu 22.04 LTS Pre-installed</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Related Products Carousel -->
+<div class="mt-20">
+<div class="flex items-center justify-between mb-8">
+<h3 class="text-2xl font-black">Related Products</h3>
+<div class="flex gap-2">
+<button class="p-2 border border-slate-200 dark:border-slate-700 rounded-full hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<button class="p-2 border border-slate-200 dark:border-slate-700 rounded-full hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors">
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Related Card 1 -->
+<div class="bg-white dark:bg-slate-800 rounded-xl overflow-hidden border border-slate-200 dark:border-slate-700 group hover:shadow-xl transition-shadow">
+<div class="aspect-square relative overflow-hidden">
+<img alt="External Raid Array" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="External high speed RAID storage array" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZS2sQuGQ_AhOuotb9mSwWIUWtaJ9I8OJXbZ9-BRMGLDa7qQqPtKEIv1trgZIBtC9ICU9Cre_F2igbsq_Sg8DmjYy0-HKAS664q5CBuTAivz8QSNwgp58ucSU9FridD2exlaHJRqA0i5Ewiu2YUaIDfweOHVmDc4muEqfU6hf5f954fP42f0byzzc6iyQYSvcT2IlTY7JH8beVaR5wdJmUm-DfeTmSXj8v1QWtlJqfDgnhExPwtmODkeLKK_jjSzVU_uAI-1fwmM0d"/>
+</div>
+<div class="p-4">
+<h4 class="font-bold text-slate-900 dark:text-slate-100 mb-1 line-clamp-1">ProStorage 64TB RAID 10 Array</h4>
+<p class="text-slate-500 text-sm mb-3">Thunderbolt 4 / USB-C</p>
+<div class="flex items-center justify-between">
+<span class="text-primary font-bold">$1,299.00</span>
+<button class="p-2 bg-slate-100 dark:bg-slate-700 rounded-lg hover:bg-primary hover:text-white transition-colors">
+<span class="material-symbols-outlined text-sm">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Related Card 2 -->
+<div class="bg-white dark:bg-slate-800 rounded-xl overflow-hidden border border-slate-200 dark:border-slate-700 group hover:shadow-xl transition-shadow">
+<div class="aspect-square relative overflow-hidden">
+<img alt="Professional 5K Monitor" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="High resolution 5K professional desktop monitor" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYA-9K3SV2tESEcT-cx507OWThcZOVS_U-mRUUl2NGGBE_U2UyYIDyTqxaWD7AUt9-GJLkz1Wx8CYMn1pMSL4kNMYOFiBTv98_cGlpPhRWmBKBH5CKgYjomyE3X0pnqX1tgL6VqcDs4RXdTRmJCsiWW3UXnEHn1Tx43hNNwlo07eijCON8I-9R-lSz0-_aba1the9tQd2I8siFLqX7XQieEBpOu_TY8z1wAlzJC6myAgp3TJpLhR2Kb6r2do01oibwJ9Y8SCit2F8Y"/>
+</div>
+<div class="p-4">
+<h4 class="font-bold text-slate-900 dark:text-slate-100 mb-1 line-clamp-1">UltraVision 32" 5K HDR Monitor</h4>
+<p class="text-slate-500 text-sm mb-3">100% Adobe RGB / 1000 nits</p>
+<div class="flex items-center justify-between">
+<span class="text-primary font-bold">$1,599.00</span>
+<button class="p-2 bg-slate-100 dark:bg-slate-700 rounded-lg hover:bg-primary hover:text-white transition-colors">
+<span class="material-symbols-outlined text-sm">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Related Card 3 -->
+<div class="bg-white dark:bg-slate-800 rounded-xl overflow-hidden border border-slate-200 dark:border-slate-700 group hover:shadow-xl transition-shadow">
+<div class="aspect-square relative overflow-hidden">
+<img alt="Mechanical Keyboard" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="High performance mechanical coding keyboard" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpvR_poq2ZmkXGk2M1YgtVuOLg0mfrsP4z4NHugTqluT3bm-yzoFGYIOEyaZElhepthz4kW91mkF0celMLRfkdXgCxmCtaUI1Gnq9H1hss-SasfB8t_52WLKm_LylmMExUjLnOc38UWR-doAgtYimbH36cRXt8obvHPgcLKhXe8eEn37jX7A0uL30ZF_OMnb7AzGxcwMrvptBYyS1_UnJYRxjcuG5dj5F8ONyTQgu6yVIhD9Ofv1JQKdeUKtnNA9ok6GC1mXFWjvXa"/>
+</div>
+<div class="p-4">
+<h4 class="font-bold text-slate-900 dark:text-slate-100 mb-1 line-clamp-1">TechBoard Pro MX Mechanical</h4>
+<p class="text-slate-500 text-sm mb-3">Silent Red Switches / RGB</p>
+<div class="flex items-center justify-between">
+<span class="text-primary font-bold">$189.00</span>
+<button class="p-2 bg-slate-100 dark:bg-slate-700 rounded-lg hover:bg-primary hover:text-white transition-colors">
+<span class="material-symbols-outlined text-sm">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Related Card 4 -->
+<div class="bg-white dark:bg-slate-800 rounded-xl overflow-hidden border border-slate-200 dark:border-slate-700 group hover:shadow-xl transition-shadow">
+<div class="aspect-square relative overflow-hidden">
+<img alt="UPS Power Backup" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Power backup UPS system for servers" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJGcUjOm5Vk70oEmoCRg4rm0N9jaXr9K7yfBD3cCoH92LZBk-0zPoVs7JndTKQ6THpXe-e7mGeRS4DKxIfTQICE6Lj6NilaFe94ZFfC78A1yGBaikwqa9fdljfwZ_7p3ax-uauRent-3Tweodf2dcUl_LaZ9VwVbWcLLy_l2oBqqR7_K27xq3Skl8oEfNSK6IwnBNWhHSp-8yhXYrvt0RnvexfFfPDCsi2-D1TL1YD1szcSRfFBBK_3Cx6v0j3gMrBWnEVh0XvvIth"/>
+</div>
+<div class="p-4">
+<h4 class="font-bold text-slate-900 dark:text-slate-100 mb-1 line-clamp-1">PowerSafe 3000VA Sine-Wave UPS</h4>
+<p class="text-slate-500 text-sm mb-3">Rack mount / LCD Display</p>
+<div class="flex items-center justify-between">
+<span class="text-primary font-bold">$749.00</span>
+<button class="p-2 bg-slate-100 dark:bg-slate-700 rounded-lg hover:bg-primary hover:text-white transition-colors">
+<span class="material-symbols-outlined text-sm">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="mt-24 bg-slate-900 text-slate-400 py-16 border-t border-slate-800">
+<div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-12">
+<div>
+<div class="flex items-center gap-2 text-white mb-6">
+<span class="material-symbols-outlined text-3xl">memory</span>
+<h2 class="text-xl font-bold tracking-tight">TechFix-It</h2>
+</div>
+<p class="text-sm leading-relaxed">The global destination for high-performance computing, enterprise hardware, and professional IT solutions.</p>
+<div class="flex gap-4 mt-6">
+<a class="hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">public</span></a>
+<a class="hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">chat</span></a>
+<a class="hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">share</span></a>
+</div>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6 uppercase tracking-wider text-xs">Products</h4>
+<ul class="flex flex-col gap-4 text-sm">
+<li><a class="hover:text-primary transition-colors" href="#">Workstations</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Servers</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Components</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Storage</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6 uppercase tracking-wider text-xs">Company</h4>
+<ul class="flex flex-col gap-4 text-sm">
+<li><a class="hover:text-primary transition-colors" href="#">About Us</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Careers</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Terms of Service</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6 uppercase tracking-wider text-xs">Newsletter</h4>
+<p class="text-sm mb-4">Get the latest technical news and updates.</p>
+<form class="flex gap-2">
+<input class="bg-slate-800 border-none rounded-lg py-2 px-3 text-sm focus:ring-1 focus:ring-primary w-full" placeholder="Email address" type="email"/>
+<button class="bg-primary text-white p-2 rounded-lg hover:bg-primary/90 transition-colors">
+<span class="material-symbols-outlined">send</span>
+</button>
+</form>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-4 mt-16 pt-8 border-t border-slate-800 text-xs flex flex-col md:flex-row justify-between gap-4">
+<p>© 2024 TechFix-It International. All rights reserved.</p>
+<div class="flex gap-6">
+<span>Made for professionals</span>
+<div class="flex gap-2 items-center">
+<span class="material-symbols-outlined text-sm">lock</span>
+                    Secure Checkout
+                </div>
+</div>
+</div>
+</footer>
+</body></html>

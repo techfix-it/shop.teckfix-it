@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Payment Methods - TechFix-It Portal</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec5b13",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#221610",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Public Sans', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .filled-icon {
+            font-variation-settings: 'FILL' 1;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen">
+<div class="flex min-h-screen">
+<!-- Sidebar -->
+<aside class="w-72 bg-white dark:bg-zinc-900 border-r border-slate-200 dark:border-zinc-800 hidden lg:flex flex-col fixed h-full">
+<div class="p-6 flex items-center gap-3">
+<div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center text-white">
+<span class="material-symbols-outlined">build</span>
+</div>
+<div>
+<h1 class="font-bold text-lg leading-tight">TechFix-It</h1>
+<p class="text-xs text-slate-500 dark:text-slate-400">User Portal</p>
+</div>
+</div>
+<nav class="flex-1 px-4 space-y-1 mt-4">
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-zinc-800 rounded-xl transition-colors" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="font-medium text-sm">Profile</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-zinc-800 rounded-xl transition-colors" href="#">
+<span class="material-symbols-outlined">receipt_long</span>
+<span class="font-medium text-sm">Order History</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 bg-primary/10 text-primary rounded-xl transition-colors" href="#">
+<span class="material-symbols-outlined filled-icon">credit_card</span>
+<span class="font-medium text-sm">Payment Methods</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-zinc-800 rounded-xl transition-colors" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-medium text-sm">Settings</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-zinc-800 rounded-xl transition-colors" href="#">
+<span class="material-symbols-outlined">help_center</span>
+<span class="font-medium text-sm">Support</span>
+</a>
+</nav>
+<div class="p-4 mt-auto border-t border-slate-200 dark:border-zinc-800">
+<div class="flex items-center gap-3 p-2 rounded-xl bg-slate-50 dark:bg-zinc-800/50">
+<img alt="User profile" class="w-10 h-10 rounded-full object-cover" data-alt="Close up portrait of a smiling man" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLH8UZATdMFmP1ssIDn9gpqa5p7oE78nfWoHxQGxeIJ-bZvCuaf5dxvGFNB3M-qQUUAldjXzaVjpKhFjwHITsAVb3rg25IKFwTBvVI4jJY_VuWCXPzB7sdV6MFFHfuTiu5RG_y43TMmQQCZXM1Ie4p1xg7HWrxqL-HZ1qTyJkuXZHZZs235d28f0qvoRTC7l_yKAJsdslUtkTZTOc-QXC_y8ynAAXtwDKUVLsKr_M3LZSbs75S6fIX0fFDeE39wynHn0V6za34KKLb"/>
+<div class="overflow-hidden">
+<p class="text-sm font-semibold truncate">Alex Rivera</p>
+<p class="text-xs text-slate-500 truncate">Standard Member</p>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 lg:ml-72 transition-all">
+<!-- Header Area -->
+<header class="h-16 border-b border-slate-200 dark:border-zinc-800 bg-white/80 dark:bg-zinc-900/80 backdrop-blur-md sticky top-0 z-10 flex items-center justify-between px-6">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined lg:hidden">menu</span>
+<h2 class="font-semibold text-slate-800 dark:text-slate-200">Payment Methods</h2>
+</div>
+<div class="flex items-center gap-4">
+<button class="relative p-2 text-slate-500 hover:bg-slate-100 dark:hover:bg-zinc-800 rounded-full">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 bg-primary rounded-full border-2 border-white dark:border-zinc-900"></span>
+</button>
+</div>
+</header>
+<div class="max-w-4xl mx-auto p-6 lg:p-10">
+<!-- Welcome Section -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-10">
+<div>
+<h1 class="text-3xl font-extrabold tracking-tight text-slate-900 dark:text-slate-100">Payment Methods</h1>
+<p class="text-slate-500 dark:text-slate-400 mt-1">Update your billing details and manage your saved cards.</p>
+</div>
+<button class="flex items-center justify-center gap-2 bg-primary text-white px-6 py-3 rounded-xl font-bold hover:brightness-110 transition-all shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined">add</span>
+                        Add New Card
+                    </button>
+</div>
+<div class="grid grid-cols-1 gap-8">
+<!-- Saved Cards List -->
+<div class="space-y-4">
+<h3 class="text-lg font-bold flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">credit_score</span>
+                            Saved Cards
+                        </h3>
+<!-- Card 1 (Default) -->
+<div class="bg-white dark:bg-zinc-900 border-2 border-primary/20 p-5 rounded-2xl shadow-sm hover:shadow-md transition-shadow group">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-4">
+<div class="w-16 h-10 bg-slate-100 dark:bg-zinc-800 rounded-lg flex items-center justify-center p-2">
+<img alt="Visa" class="w-full h-full object-contain" data-alt="Blue Visa logo on transparent background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgrAOgAbUXvS_C2K3PMSaeSbShoOTHhtgndqx7XpdkycVY91MDif31OfJbAal2VKoO6oeUXCOL7UVDV4tuI8tEZQaq1onpw7WDHQ99_GetI1Y83nOIEl9SAU4UHPRRsEkR3YC6fl15N5exznT06XwqIVptrMhqvTy4buv3x820-Ykx027blLK-GREIVqn1Ze6vLGjQJoji3AcGPRV9DtyEm7s4t-jp8HzIUxcBcg9-OB7j20-SH-_Rb560ZkOIwnfBeZYbK6OaZvE-"/>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<p class="font-bold text-slate-900 dark:text-slate-100 tracking-wider">•••• •••• •••• 4242</p>
+<span class="bg-primary/10 text-primary text-[10px] uppercase font-black px-2 py-0.5 rounded-full">Default</span>
+</div>
+<p class="text-sm text-slate-500 dark:text-slate-400 mt-0.5">Expires 12/26 • Alex Rivera</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button class="p-2 text-slate-400 hover:text-primary hover:bg-primary/5 rounded-lg transition-colors" title="Edit">
+<span class="material-symbols-outlined text-xl">edit</span>
+</button>
+<button class="p-2 text-slate-400 hover:text-red-500 hover:bg-red-50 dark:hover:bg-red-500/10 rounded-lg transition-colors" title="Remove">
+<span class="material-symbols-outlined text-xl">delete</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-white dark:bg-zinc-900 border border-slate-200 dark:border-zinc-800 p-5 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-4">
+<div class="w-16 h-10 bg-slate-100 dark:bg-zinc-800 rounded-lg flex items-center justify-center p-2">
+<img alt="Mastercard" class="w-full h-full object-contain" data-alt="Red and yellow circles Mastercard logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtGY5omK4dFLN2kxpzoVJU077MsgtFFY6DxEVkiXyUfLtxheXiCfEX_yMZP_vPNBuSPG2XdPq8j0gYlYNqf7U0zwaAQDxMdmLQuA2dI5tKqo1Zc3-Pb4qg3sbt37DfzOOdQUnI4zKz-SRPePJW-v1dSXHfQ4DCEPmT-rzpinNTxB7xXATbVrECZNID2RrGU-IoTuc4WEIgkQwe68sSIgZXyHrYCDQywsm9bhK_3n6ACosMrpexGUcchV8thurpWCKiQvQUIRyoYRa7"/>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<p class="font-bold text-slate-900 dark:text-slate-100 tracking-wider">•••• •••• •••• 8888</p>
+</div>
+<p class="text-sm text-slate-500 dark:text-slate-400 mt-0.5">Expires 05/25 • Alex Rivera</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button class="text-xs font-bold text-slate-500 hover:text-primary transition-colors px-3 py-1.5 rounded-lg border border-slate-200 dark:border-zinc-700 hover:border-primary/30">
+                                        Set Default
+                                    </button>
+<button class="p-2 text-slate-400 hover:text-primary hover:bg-primary/5 rounded-lg transition-colors">
+<span class="material-symbols-outlined text-xl">edit</span>
+</button>
+<button class="p-2 text-slate-400 hover:text-red-500 hover:bg-red-50 dark:hover:bg-red-500/10 rounded-lg transition-colors">
+<span class="material-symbols-outlined text-xl">delete</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Security & Info -->
+<div class="bg-primary/5 rounded-2xl p-6 border border-primary/10">
+<div class="flex flex-col md:flex-row gap-6 items-center">
+<div class="bg-white dark:bg-zinc-800 p-4 rounded-xl shadow-sm">
+<span class="material-symbols-outlined text-4xl text-primary filled-icon">verified_user</span>
+</div>
+<div class="flex-1 text-center md:text-left">
+<h4 class="font-bold text-slate-900 dark:text-slate-100 mb-1">Your payments are secure</h4>
+<p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                                    TechFix-It complies with the Payment Card Industry Data Security Standard (PCI DSS). We use advanced encryption to ensure your card details are protected at all times.
+                                </p>
+</div>
+<div class="flex gap-4 opacity-60">
+<div class="flex flex-col items-center gap-1">
+<span class="material-symbols-outlined text-2xl">lock</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">SSL Encrypted</span>
+</div>
+<div class="flex flex-col items-center gap-1">
+<span class="material-symbols-outlined text-2xl">security</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">PCI Compliant</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Billing History Summary -->
+<div class="mt-12">
+<div class="flex items-center justify-between mb-4">
+<h3 class="text-lg font-bold">Billing Address</h3>
+<button class="text-primary text-sm font-bold hover:underline">Change</button>
+</div>
+<div class="bg-white dark:bg-zinc-900 p-6 rounded-2xl border border-slate-200 dark:border-zinc-800 flex justify-between items-start">
+<div>
+<p class="font-semibold">Alex Rivera</p>
+<p class="text-slate-500 dark:text-slate-400 text-sm mt-1">123 Tech Lane, Suite 400<br/>Palo Alto, CA 94301<br/>United States</p>
+</div>
+<span class="material-symbols-outlined text-slate-300">location_on</span>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<footer class="mt-auto border-t border-slate-200 dark:border-zinc-800 bg-white dark:bg-zinc-950 px-6 py-8">
+<div class="max-w-4xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 bg-primary rounded flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-sm">build</span>
+</div>
+<span class="font-bold text-slate-400">TechFix-It</span>
+</div>
+<div class="flex gap-8 text-sm font-medium text-slate-400">
+<a class="hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-primary transition-colors" href="#">Terms of Service</a>
+<a class="hover:text-primary transition-colors" href="#">Contact Support</a>
+</div>
+<p class="text-xs text-slate-500">© 2024 TechFix-It Inc.</p>
+</div>
+</footer>
+</main>
+</div>
+</body></html>

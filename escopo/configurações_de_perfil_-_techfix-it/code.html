@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>User Settings - TechFix-It</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec5b13",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#221610",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Public Sans', sans-serif; }
+        .material-symbols-outlined { font-size: 24px; }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 antialiased">
+<div class="flex min-h-screen">
+<!-- Sidebar Navigation -->
+<aside class="w-64 bg-slate-900 dark:bg-black text-white flex flex-col fixed h-full z-50">
+<div class="p-6">
+<div class="flex items-center gap-3">
+<div class="bg-primary rounded-lg p-1">
+<span class="material-symbols-outlined text-white">build</span>
+</div>
+<div>
+<h1 class="text-lg font-bold leading-none">TechFix-It</h1>
+<p class="text-xs text-slate-400 mt-1">Electronics Repair</p>
+</div>
+</div>
+</div>
+<nav class="flex-1 px-4 space-y-2">
+<a class="flex items-center gap-3 px-3 py-2 text-slate-400 hover:text-white hover:bg-white/10 rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="text-sm font-medium">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-slate-400 hover:text-white hover:bg-white/10 rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined">package</span>
+<span class="text-sm font-medium">Orders</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-slate-400 hover:text-white hover:bg-white/10 rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined">inventory_2</span>
+<span class="text-sm font-medium">Inventory</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 bg-primary/20 text-primary border border-primary/30 rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1">settings</span>
+<span class="text-sm font-medium">Settings</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-slate-400 hover:text-white hover:bg-white/10 rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined">help</span>
+<span class="text-sm font-medium">Support</span>
+</a>
+</nav>
+<div class="p-4 border-t border-white/10">
+<button class="flex w-full items-center gap-3 px-3 py-2 text-red-400 hover:bg-red-500/10 rounded-lg transition-colors">
+<span class="material-symbols-outlined">logout</span>
+<span class="text-sm font-medium">Logout</span>
+</button>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="ml-64 flex-1 p-8">
+<div class="max-w-4xl mx-auto">
+<!-- Header Section -->
+<div class="mb-8">
+<div class="flex items-center gap-2 text-sm text-slate-500 mb-2">
+<a class="hover:text-primary" href="#">Home</a>
+<span>/</span>
+<span class="text-slate-900 dark:text-slate-100 font-medium">User Settings</span>
+</div>
+<h2 class="text-3xl font-black tracking-tight">Account Settings</h2>
+<p class="text-slate-500 dark:text-slate-400 mt-1">Manage your profile, security, and notification preferences.</p>
+</div>
+<div class="space-y-8">
+<!-- Profile Information Card -->
+<section class="bg-white dark:bg-slate-800/50 rounded-xl border border-slate-200 dark:border-slate-700 overflow-hidden">
+<div class="p-6 border-b border-slate-200 dark:border-slate-700">
+<h3 class="text-lg font-bold">Personal Information</h3>
+<p class="text-sm text-slate-500">Update your account details and profile picture.</p>
+</div>
+<div class="p-6">
+<div class="flex flex-col md:flex-row gap-8">
+<div class="flex flex-col items-center gap-4">
+<div class="relative group">
+<div class="w-32 h-32 rounded-full bg-slate-200 dark:bg-slate-700 overflow-hidden border-4 border-white dark:border-slate-800 shadow-lg">
+<img alt="User Profile" class="w-full h-full object-cover" data-alt="Close-up professional portrait of a man smiling" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlGOKQYo7a9lrErFdC32V89o8Q0FqXjoHuPmwwkF1Nb17h45RjlvmodqFtH8u927Su5jWrjM5bsI5Tdca2ayapMqpNAzHnKOyqXNMn6TfTrWkORj23Mlg2XfEn5lk0WpfWafrMi1ue0HBcsSBnlEivH9YLPFsmxGo7hceTQl0odnI1otyG8aoidT5lgMZSfVWOfDtJGfAP4FdzCobHek0_lYXqobCxhBB1GMiKPPnPPcz1xWL49_66RQ3_AybRmusGKGAMieTadgtk"/>
+</div>
+<button class="absolute bottom-0 right-0 p-2 bg-primary text-white rounded-full shadow-lg hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-sm">photo_camera</span>
+</button>
+</div>
+<button class="text-sm font-semibold text-primary hover:underline">Remove photo</button>
+</div>
+<div class="flex-1 grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="col-span-1">
+<label class="block text-sm font-semibold mb-1.5">Full Name</label>
+<input class="w-full px-4 py-2 rounded-lg border border-slate-300 dark:border-slate-600 bg-transparent focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all" type="text" value="Alex Rivera"/>
+</div>
+<div class="col-span-1">
+<label class="block text-sm font-semibold mb-1.5">Email Address</label>
+<input class="w-full px-4 py-2 rounded-lg border border-slate-300 dark:border-slate-600 bg-transparent focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all" type="email" value="alex.rivera@techfix-it.com"/>
+</div>
+<div class="col-span-1">
+<label class="block text-sm font-semibold mb-1.5">Phone Number</label>
+<input class="w-full px-4 py-2 rounded-lg border border-slate-300 dark:border-slate-600 bg-transparent focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all" type="tel" value="+1 (555) 000-1234"/>
+</div>
+<div class="col-span-1">
+<label class="block text-sm font-semibold mb-1.5">Timezone</label>
+<select class="w-full px-4 py-2 rounded-lg border border-slate-300 dark:border-slate-600 bg-transparent focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all appearance-none">
+<option>Pacific Time (PT)</option>
+<option>Eastern Time (ET)</option>
+<option>UTC+0</option>
+</select>
+</div>
+</div>
+</div>
+<div class="mt-6 flex justify-end">
+<button class="px-6 py-2 bg-primary text-white font-bold rounded-lg hover:bg-primary/90 transition-all shadow-md shadow-primary/20">Save Profile</button>
+</div>
+</div>
+</section>
+<!-- Security Card -->
+<section class="bg-white dark:bg-slate-800/50 rounded-xl border border-slate-200 dark:border-slate-700 overflow-hidden">
+<div class="p-6 border-b border-slate-200 dark:border-slate-700">
+<h3 class="text-lg font-bold">Security</h3>
+<p class="text-sm text-slate-500">Update your password and secure your account.</p>
+</div>
+<div class="p-6 space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-4">
+<div>
+<label class="block text-sm font-semibold mb-1.5">Current Password</label>
+<input class="w-full px-4 py-2 rounded-lg border border-slate-300 dark:border-slate-600 bg-transparent focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all" placeholder="••••••••" type="password"/>
+</div>
+<div>
+<label class="block text-sm font-semibold mb-1.5">New Password</label>
+<input class="w-full px-4 py-2 rounded-lg border border-slate-300 dark:border-slate-600 bg-transparent focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all" placeholder="••••••••" type="password"/>
+<div class="mt-2 h-1.5 w-full bg-slate-200 dark:bg-slate-700 rounded-full overflow-hidden">
+<div class="h-full bg-primary w-2/3"></div>
+</div>
+<p class="text-xs text-slate-500 mt-1">Password strength: Strong</p>
+</div>
+<div>
+<label class="block text-sm font-semibold mb-1.5">Confirm New Password</label>
+<input class="w-full px-4 py-2 rounded-lg border border-slate-300 dark:border-slate-600 bg-transparent focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all" placeholder="••••••••" type="password"/>
+</div>
+</div>
+<div class="bg-primary/5 border border-primary/20 rounded-xl p-6">
+<div class="flex gap-4">
+<div class="p-2 bg-primary/20 rounded-lg h-fit">
+<span class="material-symbols-outlined text-primary">verified_user</span>
+</div>
+<div>
+<h4 class="font-bold text-sm">Two-Factor Authentication</h4>
+<p class="text-xs text-slate-500 mt-1 leading-relaxed">Add an extra layer of security to your account by requiring more than just a password to log in.</p>
+<button class="mt-4 px-4 py-2 border border-primary text-primary text-xs font-bold rounded-lg hover:bg-primary hover:text-white transition-all">Enable 2FA</button>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-4 flex justify-end">
+<button class="px-6 py-2 bg-slate-900 dark:bg-white dark:text-slate-900 text-white font-bold rounded-lg hover:opacity-90 transition-all">Update Password</button>
+</div>
+</div>
+</section>
+<!-- Notifications Card -->
+<section class="bg-white dark:bg-slate-800/50 rounded-xl border border-slate-200 dark:border-slate-700 overflow-hidden">
+<div class="p-6 border-b border-slate-200 dark:border-slate-700">
+<h3 class="text-lg font-bold">Notification Preferences</h3>
+<p class="text-sm text-slate-500">Decide how and when you want to be contacted.</p>
+</div>
+<div class="p-6 space-y-6">
+<div class="space-y-4">
+<!-- Notification Item -->
+<div class="flex items-center justify-between py-2">
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-slate-400">mail</span>
+<div>
+<p class="text-sm font-bold">Email Notifications</p>
+<p class="text-xs text-slate-500">Receive order updates and monthly newsletters.</p>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-slate-200 peer-focus:outline-none rounded-full peer dark:bg-slate-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<!-- Notification Item -->
+<div class="flex items-center justify-between py-2">
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-slate-400">sms</span>
+<div>
+<p class="text-sm font-bold">SMS Alerts</p>
+<p class="text-xs text-slate-500">Get text messages for critical order status changes.</p>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-slate-200 peer-focus:outline-none rounded-full peer dark:bg-slate-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<!-- Notification Item -->
+<div class="flex items-center justify-between py-2">
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-slate-400">campaign</span>
+<div>
+<p class="text-sm font-bold">Promotional Offers</p>
+<p class="text-xs text-slate-500">Stay updated on sales, parts arrivals, and coupons.</p>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-slate-200 peer-focus:outline-none rounded-full peer dark:bg-slate-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+</div>
+</div>
+</section>
+<!-- Danger Zone -->
+<section class="bg-red-50 dark:bg-red-900/10 rounded-xl border border-red-200 dark:border-red-900/30 p-6">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+<div>
+<h3 class="text-red-700 dark:text-red-400 font-bold">Deactivate Account</h3>
+<p class="text-sm text-red-600/70 dark:text-red-400/60 mt-1">Once you deactivate your account, there is no going back. Please be certain.</p>
+</div>
+<button class="px-6 py-2 border border-red-200 dark:border-red-900/50 text-red-600 dark:text-red-400 font-bold rounded-lg hover:bg-red-600 hover:text-white transition-all">Deactivate</button>
+</div>
+</section>
+</div>
+</div>
+</main>
+</div>
+</body></html>
