@@ -1,5 +1,9 @@
-import { Star, StarHalf, Plus } from 'lucide-react';
+"use client";
+
+import { Star, StarHalf, Plus, Check } from 'lucide-react';
 import Link from 'next/link';
+import { useState } from 'react';
+import { useCart } from '@/context/CartContext';
 import './CardProduct.css';
 
 interface Badge {
@@ -23,6 +27,16 @@ interface CardProductProps {
 }
 
 export default function CardProduct({ product }: CardProductProps) {
+  const { addToCart } = useCart();
+  const [added, setAdded] = useState(false);
+
+  const handleAddToCart = (e: React.MouseEvent) => {
+    e.preventDefault(); // Prevent navigating if wrapped in a link
+    addToCart(product);
+    setAdded(true);
+    setTimeout(() => setAdded(false), 2000);
+  };
+
   return (
     <div className="product-card">
       {product.badge && (
@@ -57,8 +71,12 @@ export default function CardProduct({ product }: CardProductProps) {
         </div>
         <div className="product-footer-clean">
           <span className="current-price">{product.price}</span>
-          <button className="btn-add-cart-icon" aria-label="Add to cart">
-            <Plus size={20} />
+          <button 
+            className={`btn-add-cart-icon ${added ? 'added' : ''}`} 
+            aria-label="Add to cart"
+            onClick={handleAddToCart}
+          >
+            {added ? <Check size={20} /> : <Plus size={20} />}
           </button>
         </div>
       </div>

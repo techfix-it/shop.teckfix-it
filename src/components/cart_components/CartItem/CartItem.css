@@ -1,0 +1,149 @@
+.cart-item {
+  display: flex;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  background-color: var(--bg-white);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-200);
+}
+
+.ci-image-container {
+  width: 100px;
+  height: 100px;
+  flex-shrink: 0;
+  background-color: var(--bg-100);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 640px) {
+  .ci-image-container {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+.ci-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ci-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.ci-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.ci-title-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.ci-title {
+  font-size: 1.125rem;
+  font-weight: 800;
+  color: var(--text-900);
+  margin: 0;
+}
+
+.ci-sku {
+  font-size: 0.75rem;
+  color: var(--text-500);
+}
+
+.ci-price {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--text-900);
+}
+
+.ci-status {
+  margin-top: 0.75rem;
+  margin-bottom: auto; /* Pushes the actions to the bottom */
+}
+
+.stock-green {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.65rem;
+  font-weight: 800;
+  color: #10b981;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.stock-red {
+  font-size: 0.65rem;
+  font-weight: 800;
+  color: #ef4444;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.ci-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
+.ci-quantity-selector {
+  display: flex;
+  align-items: center;
+  background-color: var(--bg-50);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-200);
+}
+
+.ci-qty-btn {
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-600);
+}
+
+.ci-qty-btn:hover {
+  background-color: var(--border-300);
+}
+
+.ci-qty-value {
+  width: 1.5rem;
+  text-align: center;
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: var(--text-900);
+}
+
+.ci-remove-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: none;
+  border: none;
+  color: var(--text-400);
+  font-weight: 600;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.ci-remove-btn:hover {
+  color: #ef4444; /* Red on hover */
+}

@@ -145,17 +145,26 @@
 }
 
 .rpc-btn-add {
+  width: 2.25rem;
+  height: 2.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: #0c18ba; /* TechFix primary blue */
   color: white;
   border: none;
-  border-radius: 4px;
-  padding: 0.35rem 0.75rem;
+  border-radius: var(--radius-sm);
   font-weight: 700;
-  font-size: 0.85rem;
   cursor: pointer;
-  transition: background-color 0.2s;
+  transition: all 0.2s;
 }
 
 .rpc-btn-add:hover {
   background-color: #0a1391;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px -1px rgba(12, 24, 186, 0.2);
+}
+
+.rpc-btn-add.added {
+  background-color: #10b981 !important; /* Tailwind emerald-500 */
 }

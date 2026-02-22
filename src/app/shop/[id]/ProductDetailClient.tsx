@@ -2,13 +2,22 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { Star, StarHalf, CheckCircle, ChevronRight, ShoppingCart, Minus, Plus, Truck, ChevronDown, ChevronUp } from 'lucide-react';
+import { Star, StarHalf, CheckCircle, ChevronRight, ShoppingCart, Minus, Plus, Truck, ChevronDown, ChevronUp, Check } from 'lucide-react';
 import RelatedProductsSection from '@/components/product_detail_components/RelatedProductsSection';
+import { useCart } from '@/context/CartContext';
 
 export default function ProductDetailClient({ product, allProducts }: { product: any, allProducts: any[] }) {
   const [quantity, setQuantity] = useState(1);
   const [activeImage, setActiveImage] = useState(0);
   const [isSpecsOpen, setIsSpecsOpen] = useState(false);
+  const { addToCart } = useCart();
+  const [added, setAdded] = useState(false);
+
+  const handleAddToCart = () => {
+    addToCart(product, quantity);
+    setAdded(true);
+    setTimeout(() => setAdded(false), 2000);
+  };
 
   // Mocking 5 dummy images for the gallery since we only have 1 in JSON
   const galleryImages = [
@@ -115,9 +124,13 @@ export default function ProductDetailClient({ product, allProducts }: { product:
                  <span className="qty-value">{quantity}</span>
                  <button onClick={() => setQuantity(quantity + 1)} className="qty-btn"><Plus size={16}/></button>
                </div>
-               <button className="btn-add-to-cart">
-                  <ShoppingCart size={18} />
-                  Add to Cart
+               <button 
+                  className={`btn-add-to-cart ${added ? 'added' : ''}`}
+                  onClick={handleAddToCart}
+                  style={added ? { backgroundColor: '#10b981', color: 'white', borderColor: '#10b981' } : {}}
+                >
+                  {added ? <Check size={18} /> : <ShoppingCart size={18} />}
+                  {added ? 'Added to Cart' : 'Add to Cart'}
                </button>
              </div>
              

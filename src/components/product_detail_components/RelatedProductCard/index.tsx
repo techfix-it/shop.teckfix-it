@@ -1,5 +1,9 @@
+"use client";
+
 import Link from 'next/link';
-import { Star, StarHalf } from 'lucide-react';
+import { Star, StarHalf, Plus, Check } from 'lucide-react';
+import { useState } from 'react';
+import { useCart } from '@/context/CartContext';
 import './RelatedProductCard.css';
 import { Product } from '@/components/shop_components/CardProduct';
 
@@ -8,6 +12,16 @@ interface RelatedProductCardProps {
 }
 
 export default function RelatedProductCard({ product }: RelatedProductCardProps) {
+  const { addToCart } = useCart();
+  const [added, setAdded] = useState(false);
+
+  const handleAddToCart = (e: React.MouseEvent) => {
+    e.preventDefault(); // Prevent navigating to the product page since the button is outside a link but just in case
+    addToCart(product);
+    setAdded(true);
+    setTimeout(() => setAdded(false), 2000);
+  };
+
   return (
     <div className="related-product-card">
       <Link href={`/shop/${product.id}`} className="rpc-image-container">
@@ -54,7 +68,14 @@ export default function RelatedProductCard({ product }: RelatedProductCardProps)
         
         <div className="rpc-footer">
           <span className="rpc-price">{product.price}</span>
-          <button className="rpc-btn-add">add</button>
+          <button 
+            className={`rpc-btn-add ${added ? 'added' : ''}`}
+            onClick={handleAddToCart}
+            style={added ? { backgroundColor: '#10b981', color: 'white' } : {}}
+            aria-label="Add to cart"
+          >
+            {added ? <Check size={16} /> : <Plus size={16} />}
+          </button>
         </div>
       </div>
     </div>

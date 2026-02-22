@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import { CartProvider } from "@/context/CartContext";
 
 export const metadata: Metadata = {
   title: "TechFix-It | Shop & Reparações",
@@ -19,9 +20,11 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       </head>
       <body>
-        <ThemeProvider attribute="data-theme" defaultTheme="light" enableSystem>
-          {children}
-        </ThemeProvider>
+        <CartProvider>
+          <ThemeProvider attribute="data-theme" defaultTheme="light" enableSystem>
+            {children}
+          </ThemeProvider>
+        </CartProvider>
       </body>
     </html>
   );
