@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Menu, X, ShoppingCart, User, Search, Truck, HelpCircle, PackageSearch } from 'lucide-react';
 import styles from './Header.module.css';
-import ThemeToggle from './ThemeToggle';
+import ThemeToggle from '../ThemeToggle';
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);

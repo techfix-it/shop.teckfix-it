@@ -1,0 +1,118 @@
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1280px) {
+  .products-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* List View Overrides */
+.products-grid.list-view {
+  grid-template-columns: 1fr;
+}
+
+.products-grid.list-view .product-card {
+  flex-direction: row;
+  align-items: stretch;
+}
+
+@media (max-width: 639px) {
+  .products-grid.list-view .product-card {
+    flex-direction: column;
+  }
+}
+
+.products-grid.list-view .product-image-container {
+  width: 250px;
+  min-height: 200px;
+  border-bottom: none;
+  border-right: 1px solid var(--border-100);
+  flex-shrink: 0;
+}
+
+@media (max-width: 639px) {
+  .products-grid.list-view .product-image-container {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid var(--border-100);
+  }
+}
+
+.products-grid.list-view .product-info {
+  justify-content: space-between;
+}
+
+.products-grid.list-view .product-footer-clean {
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.page-btn {
+  min-width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-md);
+  background-color: var(--bg-white);
+  border: 1px solid var(--border-200);
+  color: var(--text-700);
+  font-weight: 600;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.page-btn:hover:not(.disabled) {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.page-btn.active {
+  background-color: var(--primary);
+  border-color: var(--primary);
+  color: white;
+}
+
+.page-btn.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background-color: var(--bg-50);
+}
+
+.page-ellipsis {
+  color: var(--text-500);
+  font-weight: 700;
+  padding: 0 0.25rem;
+}
+
+/* Mock Grid Specific Overrides */
+.mock-grid .product-card {
+  border: 1px solid var(--border-200);
+  box-shadow: none;
+}
+.mock-grid .product-card:hover {
+  border-color: var(--border-300);
+  box-shadow: var(--shadow-md);
+}
