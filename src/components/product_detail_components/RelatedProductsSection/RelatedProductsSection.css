@@ -1,0 +1,112 @@
+.rps-wrapper {
+  background-color: #e5e7eb; /* The light grayish-blue from the design */
+  padding: 1.5rem 1rem; /* Smaller padding for mobile centering */
+  border-radius: var(--radius-lg);
+  margin-top: 2rem;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .rps-wrapper {
+    padding: 2.5rem;
+    border-radius: var(--radius-xl);
+  }
+}
+
+[data-theme='dark'] .rps-wrapper {
+  background-color: var(--bg-100);
+}
+
+.rps-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .rps-header {
+    margin-bottom: 2rem;
+  }
+}
+
+.rps-title {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: #021520;
+  margin: 0;
+}
+
+[data-theme='dark'] .rps-title {
+  color: var(--text-900);
+}
+
+.rps-nav {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.rps-btn {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 9999px;
+  background-color: white;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #021520;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.2s;
+  box-shadow: var(--shadow-sm);
+}
+
+[data-theme='dark'] .rps-btn {
+  background-color: var(--bg-200);
+  color: var(--text-900);
+}
+
+.rps-btn:hover {
+  background-color: var(--bg-50);
+  transform: scale(1.05);
+}
+
+.rps-slider-container {
+  width: 100%;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.rps-slider-container::-webkit-scrollbar {
+  display: none;
+}
+
+.rps-slider-track {
+  display: flex;
+  gap: 1rem; /* tighter gap on mobile */
+  width: max-content; /* Allows track to grow based on items */
+  padding-bottom: 0.5rem; /* Space for box-shadows on hover */
+}
+
+@media (min-width: 768px) {
+  .rps-slider-track {
+    gap: 1.5rem;
+  }
+}
+
+.rps-slide-item {
+  width: 260px; /* Base width for mobile/tablets to ensure peek */
+  flex-shrink: 0;
+  display: flex;
+}
+
+@media (min-width: 1024px) {
+  .rps-slide-item {
+    /* Calculate width for exactly 4 items to fit in the container (minus gap) */
+    width: calc((100vw - 5rem - 4.5rem) / 4); /* Approximate calc based on padding */
+    max-width: 320px; /* Safety bound */
+  }
+}

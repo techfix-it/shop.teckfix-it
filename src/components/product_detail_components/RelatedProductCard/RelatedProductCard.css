@@ -1,0 +1,161 @@
+.related-product-card {
+  background-color: var(--bg-white);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s, box-shadow 0.2s;
+  height: 100%;
+}
+
+.related-product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.rpc-image-container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-100);
+}
+
+.rpc-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.related-product-card:hover .rpc-image {
+  transform: scale(1.05);
+}
+
+.rpc-badge {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.7rem;
+  font-weight: 800;
+  color: white;
+  border-radius: 2px;
+  z-index: 10;
+  text-transform: uppercase;
+}
+
+.rpc-badge.badge-new {
+  background-color: #2563eb;
+}
+
+.rpc-badge.badge-hot {
+  background-color: #ea580c;
+}
+
+.rpc-badge.badge-refurbished {
+  background-color: #10b981;
+}
+
+.rpc-badge.badge-promo {
+  background-color: #8b5cf6;
+}
+
+.rpc-info {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.rpc-category {
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: var(--text-500);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+}
+
+.rpc-title {
+  font-size: 1.125rem;
+  font-weight: 800;
+  color: #0f172a;
+  line-height: 1.3;
+  margin: 0;
+  margin-bottom: 0.75rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-height: 2.925rem; /* ~2 lines */
+}
+
+[data-theme='dark'] .rpc-title {
+  color: var(--text-900);
+}
+
+.rpc-rating {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.rpc-stars {
+  display: flex;
+  align-items: center;
+  gap: 0.125rem;
+}
+
+.rpc-rating-count {
+  font-size: 0.75rem;
+  color: var(--text-500);
+  font-weight: 500;
+}
+
+.rpc-divider {
+  border: none;
+  border-top: 1px dashed var(--border-200);
+  margin: auto 0 1rem 0; /* push to bottom but above footer */
+  width: 100%;
+}
+
+.rpc-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.rpc-price {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #0c18ba;
+  line-height: 1;
+}
+
+[data-theme='dark'] .rpc-price {
+  color: var(--text-900);
+}
+
+.rpc-btn-add {
+  background-color: #0c18ba; /* TechFix primary blue */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 0.35rem 0.75rem;
+  font-weight: 700;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.rpc-btn-add:hover {
+  background-color: #0a1391;
+}

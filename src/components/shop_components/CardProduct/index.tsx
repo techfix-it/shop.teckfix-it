@@ -1,4 +1,5 @@
-import { Star, StarHalf } from 'lucide-react';
+import { Star, StarHalf, Plus } from 'lucide-react';
+import Link from 'next/link';
 import './CardProduct.css';
 
 interface Badge {
@@ -27,12 +28,14 @@ export default function CardProduct({ product }: CardProductProps) {
       {product.badge && (
         <span className={`badge badge-${product.badge.type.toLowerCase()}`}>{product.badge.text}</span>
       )}
-      <div className="product-image-container">
+      <Link href={`/shop/${product.id}`} className="product-image-container">
         <img src={product.image} alt={product.title} className="product-image" />
-      </div>
+      </Link>
       <div className="product-info">
         <span className="product-category">{product.category}</span>
-        <h3 className="product-title">{product.title}</h3>
+        <Link href={`/shop/${product.id}`} style={{ textDecoration: 'none' }}>
+          <h3 className="product-title">{product.title}</h3>
+        </Link>
         <div className="product-rating">
           {[1, 2, 3, 4, 5].map((star) => {
             if (star <= Math.floor(product.rating)) {
@@ -54,7 +57,9 @@ export default function CardProduct({ product }: CardProductProps) {
         </div>
         <div className="product-footer-clean">
           <span className="current-price">{product.price}</span>
-          <button className="btn-add-cart-text">add</button>
+          <button className="btn-add-cart-icon" aria-label="Add to cart">
+            <Plus size={20} />
+          </button>
         </div>
       </div>
     </div>
