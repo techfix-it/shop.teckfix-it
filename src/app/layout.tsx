@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { CartProvider } from "@/context/CartContext";
+import { Analytics } from "@vercel/analytics/next";
 
 export const metadata: Metadata = {
   title: "TechFix-It | Shop & Reparações",
@@ -25,6 +26,7 @@ export default function RootLayout({
             {children}
           </ThemeProvider>
         </CartProvider>
+        <Analytics />
       </body>
     </html>
   );
