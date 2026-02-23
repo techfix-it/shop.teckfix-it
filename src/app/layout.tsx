@@ -27,6 +27,7 @@ export default function RootLayout({
             <Analytics />
           </ThemeProvider>
         </CartProvider>
+        <Analytics />
       </body>
     </html>
   );
