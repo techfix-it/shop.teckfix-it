@@ -1,0 +1,61 @@
+/* Featured Hardware extracted from home.css */
+.featured-section {
+  background-color: var(--bg-white);
+}
+
+.slider-controls {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.slider-btn {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  border: 1px solid var(--border-200);
+  background-color: var(--bg-white);
+  color: var(--text-600);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.slider-btn:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.home-products-grid {
+  display: flex;
+  align-items: stretch; /* Ensures all flex items (cards) have the same height */
+  gap: 1.5rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 0.5rem; 
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+.home-products-grid::-webkit-scrollbar {
+  display: none; /* Chrome, Safari and Opera */
+}
+
+.home-products-grid > * {
+  flex: 0 0 calc(100% - 2rem);
+  scroll-snap-align: start;
+  display: flex; /* Ensure the card link itself is a flex container */
+}
+
+@media (min-width: 640px) {
+  .home-products-grid > * {
+    flex: 0 0 calc(50% - 1rem);
+  }
+}
+
+@media (min-width: 1024px) {
+  .home-products-grid > * {
+    flex: 0 0 calc(20% - 1.25rem); /* exactly 5 cards visible at a time */
+  }
+}

@@ -20,6 +20,15 @@ export default function OrderSummary({ subtotal, itemCount, shipping, tax, isCar
   };
 
   const SummaryButton = () => {
+    if (itemCount === 0) {
+      return (
+        <button className="os-checkout-btn" disabled>
+          Proceed to Checkout
+          <ArrowRight size={18} />
+        </button>
+      );
+    }
+    
     if (isCartPage) {
       return (
         <Link href="/checkout" className="os-checkout-btn" style={{ textDecoration: 'none' }}>

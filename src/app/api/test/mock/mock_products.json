@@ -1,42 +1,59 @@
 [
   {
     "id": 1,
-    "badge": { "text": "NEW", "type": "new" },
-    "image": "https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?auto=format&fit=crop&q=80&w=300&h=300",
-    "category": "PROCESSORS",
-    "title": "Intel Core i9-14900K Desktop Processor 24 Cores",
-    "rating": 4.5,
-    "reviews": 42,
+    "badge": {
+      "text": "SALE",
+      "type": "discount"
+    },
+    "image": "https://images.unsplash.com/photo-1593642632823-8f785ba67e45?auto=format&fit=crop&q=80&w=400&h=300",
+    "category": "LAPTOPS",
+    "title": "ASUS ROG Zephyrus G14 Gaming Laptop - Ryzen 9, RTX 4070",
+    "rating": 5,
+    "reviews": 112,
+    "currentPrice": "€1,849.00",
+    "originalPrice": "€2,199.00",
     "price": "€649.00"
   },
   {
     "id": 2,
-    "badge": { "text": "HOT", "type": "hot" },
-    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuDiM3qO6eN_HwQ9X8Gf2xJ6H5vGZ4A1YJj7-d95I0I_FzLp4xQ1j_D9X3G7N8tJz6F0Q9I_L1G6Tb5O6B_x7f_Icwq1HqQzJZz4L_0XU9O0xJY9J_5u3B_WkVZJ4XzYnO_uJv2RkTl_vUq0F_4bWq1N-eS07pE_lO3c4l3c",
+    "badge": {
+      "text": "NEW",
+      "type": "condition grade-a"
+    },
+    "image": "https://images.unsplash.com/photo-1587202372775-e229f172b9d7?auto=format&fit=crop&q=80&w=400&h=300",
     "category": "GRAPHICS CARDS",
-    "title": "ASUS TUF Gaming GeForce RTX 4080 SUPER 16GB",
+    "title": "NVIDIA GeForce RTX 4080 Super Founders Edition 16GB",
     "rating": 5,
-    "reviews": 18,
+    "reviews": 54,
+    "currentPrice": "€1,199.00",
     "price": "€1,149.00"
   },
   {
     "id": 3,
-    "badge": { "text": "REFURBISHED", "type": "refurbished" },
-    "image": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&q=80&w=300&h=300",
-    "category": "LAPTOPS",
-    "title": "Apple MacBook Pro 16\" (M3 Max, 64GB RAM, 2TB SSD)",
-    "rating": 4.5,
-    "reviews": 25,
+    "badge": {
+      "text": "REFURBISHED",
+      "type": "refurbished"
+    },
+    "image": "https://images.unsplash.com/photo-1592750475338-74b7b21085ab?auto=format&fit=crop&q=80&w=400&h=300",
+    "category": "MOBILE",
+    "title": "iPhone 15 Pro Max 256GB - Titanium Gray",
+    "rating": 5,
+    "reviews": 31,
+    "currentPrice": "€1,399.00",
     "price": "€3,299.00"
   },
   {
     "id": 4,
-    "badge": null,
-    "image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=80&w=300&h=300",
+    "badge": {
+      "text": "RESTOCK",
+      "type": "feature"
+    },
+    "image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=80&w=400&h=300",
     "category": "NETWORKING",
-    "title": "Ubiquiti UniFi Dream Machine Special Edition",
-    "rating": 4,
-    "reviews": 9,
+    "title": "Ubiquiti UniFi Pro 24-Port Gigabit PoE Managed Switch",
+    "rating": 5,
+    "reviews": 28,
+    "currentPrice": "€429.00",
     "price": "€499.00"
   },
   {
@@ -47,37 +64,50 @@
     "title": "Dell PowerEdge T150 Tower Server - Xeon E-2314",
     "rating": 4.5,
     "reviews": 11,
-    "price": "€1,299.00"
+    "price": "€1,299.00",
+    "currentPrice": "€1,299.00"
   },
   {
     "id": 6,
-    "badge": { "text": "PROMO", "type": "promo" },
+    "badge": {
+      "text": "PROMO",
+      "type": "promo"
+    },
     "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuD3lpNr5EsDc0u7b2mun74LJxzBGIL2q8zc_iHeZ6ZyCJvlZxm146APPwibmn71IJpAum-yE0yOzIuH-69xMedgVVJl4RqDQ8JObrukMONRFDfAyYVWb8UnBBjpoelGWtzHUR6nq8WgTwNqN4gXGSj4EQ5I4ddizoxLY7pS9dCBFQlhb71PqosgZsPv5A13P7Pu6b3RF9q9W_6R2a8VXLF8gF4tETvdrxKJX_pHikc-5wh8grFMkRILn2OrmKZV90ZAhtu6riYsf8g0",
     "category": "STORAGE",
     "title": "Samsung 990 PRO NVMe M.2 SSD 2TB PCIe 4.0",
     "rating": 5,
     "reviews": 88,
-    "price": "€189.00"
+    "price": "€189.00",
+    "currentPrice": "€189.00"
   },
   {
     "id": 7,
-    "badge": { "text": "NEW", "type": "new" },
+    "badge": {
+      "text": "NEW",
+      "type": "new"
+    },
     "image": "https://images.unsplash.com/photo-1614149162883-504ce4d13909?auto=format&fit=crop&q=80&w=300&h=300",
     "category": "GRAPHICS CARDS",
     "title": "NVIDIA GeForce RTX 4090 Founders Edition 24GB",
     "rating": 5,
     "reviews": 156,
-    "price": "€1,899.00"
+    "price": "€1,899.00",
+    "currentPrice": "€1,899.00"
   },
   {
     "id": 8,
-    "badge": { "text": "HOT", "type": "hot" },
+    "badge": {
+      "text": "HOT",
+      "type": "hot"
+    },
     "image": "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?auto=format&fit=crop&q=80&w=300&h=300",
     "category": "PERIPHERALS",
     "title": "Logitech G Pro X Superlight 2 Wireless Mouse",
     "rating": 4.8,
     "reviews": 312,
-    "price": "€159.00"
+    "price": "€159.00",
+    "currentPrice": "€159.00"
   },
   {
     "id": 9,
@@ -87,17 +117,22 @@
     "title": "AMD Ryzen 9 7950X3D 16-Core 4.2GHz",
     "rating": 4.9,
     "reviews": 94,
-    "price": "€599.00"
+    "price": "€599.00",
+    "currentPrice": "€599.00"
   },
   {
     "id": 10,
-    "badge": { "text": "PROMO", "type": "promo" },
+    "badge": {
+      "text": "PROMO",
+      "type": "promo"
+    },
     "image": "https://images.unsplash.com/photo-1593642632823-8f785ba67e45?auto=format&fit=crop&q=80&w=300&h=300",
     "category": "LAPTOPS",
     "title": "Razer Blade 15 Gaming Laptop - RTX 4070",
     "rating": 4.2,
     "reviews": 45,
-    "price": "€2,499.00"
+    "price": "€2,499.00",
+    "currentPrice": "€2,499.00"
   },
   {
     "id": 11,
@@ -107,17 +142,22 @@
     "title": "Keychron Q6 Max QMK Custom Mechanical Keyboard",
     "rating": 5,
     "reviews": 67,
-    "price": "€215.00"
+    "price": "€215.00",
+    "currentPrice": "€215.00"
   },
   {
     "id": 12,
-    "badge": { "text": "NEW", "type": "new" },
+    "badge": {
+      "text": "NEW",
+      "type": "new"
+    },
     "image": "https://images.unsplash.com/photo-1616763355548-1b606f439f86?auto=format&fit=crop&q=80&w=300&h=300",
     "category": "MONITORS",
     "title": "Alienware 34\" Curved QD-OLED Gaming Monitor",
     "rating": 4.9,
     "reviews": 128,
-    "price": "€999.00"
+    "price": "€999.00",
+    "currentPrice": "€999.00"
   },
   {
     "id": 13,
@@ -127,27 +167,36 @@
     "title": "ASUS ROG Maximus Z790 Hero WiFi",
     "rating": 4.7,
     "reviews": 33,
-    "price": "€620.00"
+    "price": "€620.00",
+    "currentPrice": "€620.00"
   },
   {
     "id": 14,
-    "badge": { "text": "HOT", "type": "hot" },
+    "badge": {
+      "text": "HOT",
+      "type": "hot"
+    },
     "image": "https://images.unsplash.com/photo-1600258842404-c10425555106?auto=format&fit=crop&q=80&w=300&h=300",
     "category": "MEMORY",
     "title": "Corsair Dominator Titanium DDR5 64GB 6600MHz",
     "rating": 4.8,
     "reviews": 56,
-    "price": "€340.00"
+    "price": "€340.00",
+    "currentPrice": "€340.00"
   },
   {
     "id": 15,
-    "badge": { "text": "REFURBISHED", "type": "refurbished" },
+    "badge": {
+      "text": "REFURBISHED",
+      "type": "refurbished"
+    },
     "image": "https://images.unsplash.com/photo-1593642702821-c8da6771f0c6?auto=format&fit=crop&q=80&w=300&h=300",
     "category": "LAPTOPS",
     "title": "Dell XPS 13 9315 Core i7 16GB RAM 512GB SSD",
-    "rating": 4.0,
+    "rating": 4,
     "reviews": 21,
-    "price": "€899.00"
+    "price": "€899.00",
+    "currentPrice": "€899.00"
   },
   {
     "id": 16,
@@ -157,17 +206,22 @@
     "title": "Sony WH-1000XM5 Wireless Noise Canceling Headphones",
     "rating": 4.9,
     "reviews": 1205,
-    "price": "€329.00"
+    "price": "€329.00",
+    "currentPrice": "€329.00"
   },
   {
     "id": 17,
-    "badge": { "text": "NEW", "type": "new" },
+    "badge": {
+      "text": "NEW",
+      "type": "new"
+    },
     "image": "https://images.unsplash.com/photo-1624705002806-5d72df19c3ad?auto=format&fit=crop&q=80&w=300&h=300",
     "category": "COOLING",
     "title": "NZXT Kraken Elite 360 RGB AIO Liquid Cooler",
     "rating": 4.6,
     "reviews": 89,
-    "price": "€289.00"
+    "price": "€289.00",
+    "currentPrice": "€289.00"
   },
   {
     "id": 18,
@@ -177,17 +231,22 @@
     "title": "Lian Li PC-O11 Dynamic EVO ATX Mid Tower",
     "rating": 5,
     "reviews": 240,
-    "price": "€175.00"
+    "price": "€175.00",
+    "currentPrice": "€175.00"
   },
   {
     "id": 19,
-    "badge": { "text": "PROMO", "type": "promo" },
+    "badge": {
+      "text": "PROMO",
+      "type": "promo"
+    },
     "image": "https://images.unsplash.com/photo-1562976540-1502c2145186?auto=format&fit=crop&q=80&w=300&h=300",
     "category": "STORAGE",
     "title": "WD Black SN850X 4TB NVMe Internal SSD",
     "rating": 4.9,
     "reviews": 112,
-    "price": "€310.00"
+    "price": "€310.00",
+    "currentPrice": "€310.00"
   },
   {
     "id": 20,
@@ -197,17 +256,22 @@
     "title": "EVGA SuperNOVA 1000 G7, 80 Plus Gold 1000W",
     "rating": 4.8,
     "reviews": 74,
-    "price": "€199.00"
+    "price": "€199.00",
+    "currentPrice": "€199.00"
   },
   {
     "id": 21,
-    "badge": { "text": "HOT", "type": "hot" },
+    "badge": {
+      "text": "HOT",
+      "type": "hot"
+    },
     "image": "https://images.unsplash.com/photo-1610492497675-9e6610738e4a?auto=format&fit=crop&q=80&w=300&h=300",
     "category": "LAPTOPS",
     "title": "ASUS ROG Zephyrus G14 (2024) Ryzen 9 32GB",
     "rating": 4.7,
     "reviews": 38,
-    "price": "€2,199.00"
+    "price": "€2,199.00",
+    "currentPrice": "€2,199.00"
   },
   {
     "id": 22,
@@ -217,17 +281,22 @@
     "title": "iPad Pro 12.9\" M2 Chip 256GB WiFi",
     "rating": 4.9,
     "reviews": 850,
-    "price": "€1,249.00"
+    "price": "€1,249.00",
+    "currentPrice": "€1,249.00"
   },
   {
     "id": 23,
-    "badge": { "text": "NEW", "type": "new" },
+    "badge": {
+      "text": "NEW",
+      "type": "new"
+    },
     "image": "https://images.unsplash.com/photo-1526876798423-97e53fb23428?auto=format&fit=crop&q=80&w=300&h=300",
     "category": "PERIPHERALS",
     "title": "Elgato Stream Deck MK.2 White Edition",
     "rating": 4.8,
     "reviews": 160,
-    "price": "€149.00"
+    "price": "€149.00",
+    "currentPrice": "€149.00"
   },
   {
     "id": 24,
@@ -237,17 +306,22 @@
     "title": "MSI MAG B650 TOMAHAWK WIFI AM5",
     "rating": 4.5,
     "reviews": 92,
-    "price": "€219.00"
+    "price": "€219.00",
+    "currentPrice": "€219.00"
   },
   {
     "id": 25,
-    "badge": { "text": "PROMO", "type": "promo" },
+    "badge": {
+      "text": "PROMO",
+      "type": "promo"
+    },
     "image": "https://images.unsplash.com/photo-1563770660941-20978e870813?auto=format&fit=crop&q=80&w=300&h=300",
     "category": "MONITORS",
     "title": "Samsung Odyssey G7 27\" 240Hz Gaming Monitor",
     "rating": 4.4,
     "reviews": 215,
-    "price": "€449.00"
+    "price": "€449.00",
+    "currentPrice": "€449.00"
   },
   {
     "id": 26,
@@ -257,17 +331,22 @@
     "title": "SteelSeries Arctis Nova Pro Wireless Headset",
     "rating": 4.7,
     "reviews": 142,
-    "price": "€349.00"
+    "price": "€349.00",
+    "currentPrice": "€349.00"
   },
   {
     "id": 27,
-    "badge": { "text": "REFURBISHED", "type": "refurbished" },
+    "badge": {
+      "text": "REFURBISHED",
+      "type": "refurbished"
+    },
     "image": "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?auto=format&fit=crop&q=80&w=300&h=300",
     "category": "LAPTOPS",
     "title": "Lenovo ThinkPad X1 Carbon Gen 10",
     "rating": 4.3,
     "reviews": 15,
-    "price": "€1,100.00"
+    "price": "€1,100.00",
+    "currentPrice": "€1,100.00"
   },
   {
     "id": 28,
@@ -277,17 +356,22 @@
     "title": "Logitech C922 Pro Stream Webcam 1080p",
     "rating": 4.6,
     "reviews": 2400,
-    "price": "€99.00"
+    "price": "€99.00",
+    "currentPrice": "€99.00"
   },
   {
     "id": 29,
-    "badge": { "text": "NEW", "type": "new" },
+    "badge": {
+      "text": "NEW",
+      "type": "new"
+    },
     "image": "https://images.unsplash.com/photo-1562976540-1502c2145186?auto=format&fit=crop&q=80&w=300&h=300",
     "category": "STORAGE",
     "title": "Crucial T705 2TB PCIe Gen5 NVMe M.2 SSD",
     "rating": 5,
     "reviews": 28,
-    "price": "€380.00"
+    "price": "€380.00",
+    "currentPrice": "€380.00"
   },
   {
     "id": 30,
@@ -297,17 +381,22 @@
     "title": "AMD Ryzen 7 7800X3D 8-Core Processor",
     "rating": 4.9,
     "reviews": 450,
-    "price": "€395.00"
+    "price": "€395.00",
+    "currentPrice": "€395.00"
   },
   {
     "id": 31,
-    "badge": { "text": "HOT", "type": "hot" },
+    "badge": {
+      "text": "HOT",
+      "type": "hot"
+    },
     "image": "https://images.unsplash.com/photo-1591489378430-ef2f4c626b35?auto=format&fit=crop&q=80&w=300&h=300",
     "category": "GRAPHICS CARDS",
     "title": "Gigabyte Radeon RX 7800 XT Gaming OC 16GB",
     "rating": 4.6,
     "reviews": 77,
-    "price": "€549.00"
+    "price": "€549.00",
+    "currentPrice": "€549.00"
   },
   {
     "id": 32,
@@ -317,27 +406,36 @@
     "title": "G.Skill Trident Z5 RGB 32GB DDR5-6000",
     "rating": 4.8,
     "reviews": 210,
-    "price": "€125.00"
+    "price": "€125.00",
+    "currentPrice": "€125.00"
   },
   {
     "id": 33,
-    "badge": { "text": "NEW", "type": "new" },
+    "badge": {
+      "text": "NEW",
+      "type": "new"
+    },
     "image": "https://images.unsplash.com/photo-1626218174358-7769486c4b79?auto=format&fit=crop&q=80&w=300&h=300",
     "category": "CASES",
     "title": "Fractal Design North Charcoal Black TG",
     "rating": 5,
     "reviews": 115,
-    "price": "€160.00"
+    "price": "€160.00",
+    "currentPrice": "€160.00"
   },
   {
     "id": 34,
-    "badge": { "text": "PROMO", "type": "promo" },
+    "badge": {
+      "text": "PROMO",
+      "type": "promo"
+    },
     "image": "https://images.unsplash.com/photo-1593305841991-05c297ba4575?auto=format&fit=crop&q=80&w=300&h=300",
     "category": "MONITORS",
     "title": "LG UltraGear 27GP850-B 27\" Nano IPS QHD",
     "rating": 4.7,
     "reviews": 340,
-    "price": "€319.00"
+    "price": "€319.00",
+    "currentPrice": "€319.00"
   },
   {
     "id": 35,
@@ -347,16 +445,21 @@
     "title": "ASUS RT-AX88U Pro Dual Band WiFi 6 Router",
     "rating": 4.5,
     "reviews": 58,
-    "price": "€285.00"
+    "price": "€285.00",
+    "currentPrice": "€285.00"
   },
   {
     "id": 36,
-    "badge": { "text": "HOT", "type": "hot" },
+    "badge": {
+      "text": "HOT",
+      "type": "hot"
+    },
     "image": "https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&q=80&w=300&h=300",
     "category": "LAPTOPS",
     "title": "Microsoft Surface Laptop 5 13.5\" i7 16GB",
     "rating": 4.4,
     "reviews": 92,
-    "price": "€1,399.00"
+    "price": "€1,399.00",
+    "currentPrice": "€1,399.00"
   }
 ]

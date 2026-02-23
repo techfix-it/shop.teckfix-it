@@ -1,0 +1,179 @@
+{
+  "store": "Shop Techfix-it",
+  "menu_categories": [
+    {
+      "category": "Hardware",
+      "presentation": "Componentes fundamentais para construir ou dar um upgrade no poder de processamento do seu setup.",
+      "subcategories": [
+        { "name": "Processors (CPU)", "image_url": "https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?auto=format&fit=crop&q=80&w=800", "description": "Unidades centrais de processamento para alta performance em jogos e trabalho." },
+        { "name": "Graphics Cards (GPU)", "image_url": "https://images.unsplash.com/photo-1591488320449-011701bb6704?auto=format&fit=crop&q=80&w=800", "description": "Placas de vídeo de última geração para gráficos realistas e Ray Tracing." },
+        { "name": "Motherboards", "image_url": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=800", "description": "Placas-mãe robustas com suporte aos chipsets mais recentes do mercado." },
+        { "name": "RAM Memory", "image_url": "https://images.unsplash.com/photo-1562976540-1502c2145186?auto=format&fit=crop&q=80&w=800", "description": "Memórias DDR4 e DDR5 de alta frequência para multitarefa sem travamentos." },
+        { "name": "Storage (SSD/HDD)", "image_url": "https://images.unsplash.com/photo-1544652478-6653e09f18a2?auto=format&fit=crop&q=80&w=800", "description": "Armazenamento rápido em SSDs NVMe e HDDs de grande capacidade." },
+        { "name": "Power Supplies", "image_url": "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&q=80&w=800", "description": "Fontes de alimentação eficientes com certificações de segurança avançadas." },
+        { "name": "Cases/Chassis", "image_url": "https://images.unsplash.com/photo-1547082299-de196ea013d6?auto=format&fit=crop&q=80&w=800", "description": "Gabinetes com design moderno e excelente fluxo de ar para seus componentes." }
+      ]
+    },
+    {
+      "category": "Power and Cooling",
+      "presentation": "Soluções térmicas e de energia para garantir a longevidade e estabilidade do seu hardware.",
+      "subcategories": [
+        { "name": "Power Supply Units", "image_url": "https://images.unsplash.com/photo-1591489378430-ef2f4c626b35?auto=format&fit=crop&q=80&w=800", "description": "Unidades de força com gerenciamento de cabos modular e alta eficiência." },
+        { "name": "Power Cables", "image_url": "https://images.unsplash.com/photo-1555664424-778a1e5e1b48?auto=format&fit=crop&q=80&w=800", "description": "Cabos de energia padrão reforçados para conexões seguras." },
+        { "name": "Braided Power Supply Cables", "image_url": "https://m.media-amazon.com/images/I/71uV6W9UuSL._AC_SL1500_.jpg", "description": "Cabos revestidos em malha para um acabamento estético superior no PC." },
+        { "name": "ARGB Power Supply Extension Cables", "image_url": "https://m.media-amazon.com/images/I/61N+6pL1FfL._AC_SL1200_.jpg", "description": "Extensores com iluminação RGB sincronizável para destacar seu setup." },
+        { "name": "Processor Cooling (Air/Water)", "image_url": "https://images.unsplash.com/photo-1614935151651-0bea6508db6b?auto=format&fit=crop&q=80&w=800", "description": "Coolers a ar e sistemas de refrigeração líquida de alto desempenho." },
+        { "name": "LED Lighting", "image_url": "https://images.unsplash.com/photo-1543196614-e046c7d3d82e?auto=format&fit=crop&q=80&w=800", "description": "Fitas LED e fitas ARGB para iluminação interna customizada." },
+        { "name": "Thermal Paste", "image_url": "https://m.media-amazon.com/images/I/61N9A9vU7AL._AC_SL1500_.jpg", "description": "Pastas térmicas de alta condutividade para controle de temperatura." },
+        { "name": "Extra Case Fans", "image_url": "https://images.unsplash.com/photo-1616333202970-870020689e47?auto=format&fit=crop&q=80&w=800", "description": "Ventoinhas adicionais para otimizar o resfriamento do gabinete." },
+        { "name": "Fan Controllers", "image_url": "https://m.media-amazon.com/images/I/61VvG0Wp2WL._AC_SL1200_.jpg", "description": "Hubs de controle para gerenciar velocidade e cores das fans." }
+      ]
+    },
+    {
+      "category": "System Refinements",
+      "presentation": "Upgrades específicos para conectividade e recursos multimídia avançados.",
+      "subcategories": [
+        { "name": "Internal Sound Cards", "image_url": "https://images.unsplash.com/photo-1555617766-c94804975da3?auto=format&fit=crop&q=80&w=800", "description": "Placas de áudio internas para som cristalino em alta definição." },
+        { "name": "External Sound Cards", "image_url": "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?auto=format&fit=crop&q=80&w=800", "description": "Interfaces de áudio USB para músicos e audiófilos exigentes." },
+        { "name": "Network Cards", "image_url": "https://m.media-amazon.com/images/I/718M9M3vVpL._AC_SL1500_.jpg", "description": "Adaptadores de rede cabeada Gigabit e 10G para ultra velocidade." },
+        { "name": "Wireless Network Cards", "image_url": "https://m.media-amazon.com/images/I/61+9EonM6uL._AC_SL1500_.jpg", "description": "Placas Wi-Fi com antenas potentes para conexões sem fio estáveis." },
+        { "name": "Wireless Routers/HomePlugs", "image_url": "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&q=80&w=800", "description": "Roteadores Mesh e extensores de rede para cobertura total da casa." },
+        { "name": "USB/Thunderbolt Options", "image_url": "https://images.unsplash.com/photo-1614624532983-4ce03382d63d?auto=format&fit=crop&q=80&w=800", "description": "Placas de expansão para portas USB-C e Thunderbolt de alta velocidade." },
+        { "name": "Capture/Streaming Cards", "image_url": "https://images.unsplash.com/photo-1593305841991-05c297ba4575?auto=format&fit=crop&q=80&w=800", "description": "Placas de captura internas para streamers e criadores de conteúdo." },
+        { "name": "External Capture Cards", "image_url": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&q=80&w=800", "description": "Dispositivos de captura externos USB para consoles e PCs." },
+        { "name": "Firewire", "image_url": "https://m.media-amazon.com/images/I/517iCscQ2BL._AC_SL1000_.jpg", "description": "Adaptadores Firewire para dispositivos legados de áudio e vídeo." }
+      ]
+    },
+    {
+      "category": "Software and Operating Systems",
+      "presentation": "As ferramentas essenciais para produtividade, segurança e funcionamento do seu computador.",
+      "subcategories": [
+        { "name": "Operating Systems", "image_url": "https://images.unsplash.com/photo-1624555130581-1d9cca783bc0?auto=format&fit=crop&q=80&w=800", "description": "Licenças originais de Windows e outros sistemas operacionais." },
+        { "name": "Office & Productivity", "image_url": "https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&q=80&w=800", "description": "Suítes de aplicativos para edição de documentos e planilhas." },
+        { "name": "Antivirus & Security", "image_url": "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=800", "description": "Proteção avançada contra vírus, malwares e ataques digitais." },
+        { "name": "Design & Creative Tools", "image_url": "https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&q=80&w=800", "description": "Software profissional para edição de fotos, vídeos e artes gráficas." },
+        { "name": "Backup & Recovery", "image_url": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=80&w=800", "description": "Ferramentas para proteção de dados e recuperação de arquivos perdidos." },
+        { "name": "Server Software", "image_url": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=80&w=800", "description": "Sistemas de gerenciamento para servidores empresariais e bancos de dados." }
+      ]
+    },
+    {
+      "category": "Computers",
+      "presentation": "Máquinas completas e configuradas, prontas para atender desde o usuário básico ao profissional.",
+      "subcategories": [
+        { "name": "Gaming PCs", "image_url": "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&q=80&w=800", "description": "Computadores potentes focados em máximo desempenho em jogos." },
+        { "name": "Office/Home PCs", "image_url": "https://images.unsplash.com/photo-1593640483413-5da7ee5169c2?auto=format&fit=crop&q=80&w=800", "description": "Desktops confiáveis para tarefas diárias e produtividade no escritório." },
+        { "name": "Workstations", "image_url": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=800", "description": "Estações de trabalho otimizadas para engenharia e renderização." },
+        { "name": "Laptops/Notebooks", "image_url": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&q=80&w=800", "description": "Portáteis de alto desempenho para levar seu trabalho onde quiser." },
+        { "name": "Upgrade Kits", "image_url": "https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?auto=format&fit=crop&q=80&w=800", "description": "Combos de CPU, Memória e Placa-mãe para renovar seu PC." },
+        { "name": "Custom PC Builder", "image_url": "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&q=80&w=800", "description": "Ferramenta interativa para você montar o computador dos seus sonhos." }
+      ]
+    },
+    {
+      "category": "Peripherals",
+      "presentation": "Os melhores acessórios para melhorar sua interação e experiência com o computador.",
+      "subcategories": [
+        { "name": "Keyboards", "image_url": "https://images.unsplash.com/photo-1511467687858-23d96c32e4ae?auto=format&fit=crop&q=80&w=800", "description": "Teclados mecânicos e de membrana para digitação e jogos." },
+        { "name": "Mice", "image_url": "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?auto=format&fit=crop&q=80&w=800", "description": "Mouses ergonômicos e gamers com sensores de alta precisão." },
+        { "name": "Headsets", "image_url": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&q=80&w=800", "description": "Fones de ouvido com microfone para imersão total e comunicação." },
+        { "name": "Mousepads", "image_url": "https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?auto=format&fit=crop&q=80&w=800", "description": "Superfícies de alta performance para deslize perfeito do mouse." },
+        { "name": "Monitors", "image_url": "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?auto=format&fit=crop&q=80&w=800", "description": "Telas 4K, UltraWide e de alta taxa de atualização para imagens vivas." },
+        { "name": "Webcams", "image_url": "https://images.unsplash.com/photo-1583394138182-2f7637c52e45?auto=format&fit=crop&q=80&w=800", "description": "Câmeras HD e 4K para reuniões online e streaming de qualidade." },
+        { "name": "Microphones", "image_url": "https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&q=80&w=800", "description": "Microfones condensadores para podcasts e lives profissionais." }
+      ]
+    },
+    {
+      "category": "Consoles and Gaming",
+      "presentation": "O universo dos videogames na palma da sua mão. Consoles e controles oficiais.",
+      "subcategories": [
+        { "name": "PlayStation", "image_url": "https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?auto=format&fit=crop&q=80&w=800", "description": "Consoles e jogos exclusivos da plataforma Sony PlayStation." },
+        { "name": "Xbox", "image_url": "https://images.unsplash.com/photo-1605901309584-818e25960a8f?auto=format&fit=crop&q=80&w=800", "description": "Ecossistema Microsoft Xbox com Game Pass e consoles poderosos." },
+        { "name": "Nintendo", "image_url": "https://images.unsplash.com/photo-1578303512597-81e6cc155b3e?auto=format&fit=crop&q=80&w=800", "description": "A diversão portátil e caseira com o Nintendo Switch e acessórios." },
+        { "name": "Controllers and Accessories", "image_url": "https://images.unsplash.com/photo-1592840331052-16e15c2c6f95?auto=format&fit=crop&q=80&w=800", "description": "Controles extras, capas e acessórios para todos os consoles." }
+      ]
+    }
+  ],
+  "global_brands_session": {
+    "audio": [
+      { "name": "Beats", "image_url": "https://upload.wikimedia.org/wikipedia/commons/4/44/Beats_Electronics_logo.svg", "description": "Design icônico e graves potentes para amantes de música." },
+      { "name": "Bose", "image_url": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Bose_logo.svg", "description": "Líder em cancelamento de ruído e fidelidade sonora premium." },
+      { "name": "Creative", "image_url": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Creative_Technology_logo.svg", "description": "Especialista em placas de som e periféricos de áudio para PC." },
+      { "name": "Focusrite", "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Focusrite_logo.png", "description": "Interfaces de áudio de nível profissional para estúdios." },
+      { "name": "JBL", "image_url": "https://upload.wikimedia.org/wikipedia/commons/2/25/JBL_logo.svg", "description": "Áudio vibrante e caixas de som resistentes para qualquer lugar." },
+      { "name": "Sennheiser", "image_url": "https://upload.wikimedia.org/wikipedia/commons/0/07/Sennheiser-Logo.svg", "description": "A escolha dos audiófilos para áudio analítico e natural." },
+      { "name": "Sony", "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Sony_logo.svg", "description": "Inovação tecnológica em fones de ouvido e sistemas de som." }
+    ],
+    "computing_and_laptops": [
+      { "name": "Acer", "image_url": "https://upload.wikimedia.org/wikipedia/commons/a/ad/Acer_2011.svg", "description": "Notebooks gamers e corporativos com ótimo custo-benefício." },
+      { "name": "Apple", "image_url": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg", "description": "Elegância e poder com a linha MacBook e ecossistema macOS." },
+      { "name": "ASUS", "image_url": "https://upload.wikimedia.org/wikipedia/commons/d/de/Asus_Logo.svg", "description": "Líder em inovação de placas-mãe e notebooks de alta performance." },
+      { "name": "Dell", "image_url": "https://upload.wikimedia.org/wikipedia/commons/4/48/Dell_Logo.svg", "description": "Soluções computacionais confiáveis para casa e empresas." },
+      { "name": "HP", "image_url": "https://upload.wikimedia.org/wikipedia/commons/a/ad/HP_logo_2012.svg", "description": "Tecnologia acessível e potente em laptops e impressoras." },
+      { "name": "Lenovo", "image_url": "https://upload.wikimedia.org/wikipedia/commons/b/b8/Lenovo_logo_2015.svg", "description": "Inovação global em ThinkPads e notebooks versáteis." },
+      { "name": "Microsoft", "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/96/Microsoft_logo_%282012%29.svg", "description": "O poder do Windows e da linha Surface para produtividade." },
+      { "name": "Samsung", "image_url": "https://upload.wikimedia.org/wikipedia/commons/2/24/Samsung_Logo.svg", "description": "Inovação em telas e armazenamento SSD de alta velocidade." }
+    ],
+    "amazon_devices": [
+      { "name": "Alexa", "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/c4/Amazon_Alexa_logo.svg", "description": "Inteligência artificial para automatizar sua casa inteligente." },
+      { "name": "Amazon", "image_url": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg", "description": "O maior ecossistema de serviços e dispositivos conectados." },
+      { "name": "Echo", "image_url": "https://upload.wikimedia.org/wikipedia/commons/a/aa/Amazon_Echo_Logo.svg", "description": "Smart speakers com som de alta qualidade e Alexa integrada." },
+      { "name": "Fire TV", "image_url": "https://upload.wikimedia.org/wikipedia/commons/2/2a/Amazon_Fire_TV_logo.svg", "description": "Sua central de entretenimento para streaming em 4K." },
+      { "name": "Kindle", "image_url": "https://upload.wikimedia.org/wikipedia/commons/1/10/Kindle_Logo.png", "description": "A melhor experiência de leitura digital com tela e-ink." }
+    ],
+    "gaming_and_streaming": [
+      { "name": "Alienware", "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Alienware_logo.svg", "description": "Hardware de elite com design futurista para gamers extremos." },
+      { "name": "AverMedia", "image_url": "https://upload.wikimedia.org/wikipedia/commons/1/14/Avermedia_Logo.svg", "description": "Equipamentos de captura de vídeo para criadores de conteúdo." },
+      { "name": "Elgato", "image_url": "https://upload.wikimedia.org/wikipedia/commons/0/0b/Elgato_Logo.svg", "description": "Ferramentas essenciais para streaming profissional e controle de live." },
+      { "name": "HyperX", "image_url": "https://upload.wikimedia.org/wikipedia/commons/1/1c/HyperX_Logo.svg", "description": "Periféricos confortáveis e duráveis para jogadores profissionais." },
+      { "name": "Logitech G", "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/c9/Logitech_logo.svg", "description": "Tecnologia de ponta em sensores e acessórios sem fio para gamers." },
+      { "name": "Razer", "image_url": "https://upload.wikimedia.org/wikipedia/commons/4/40/Razer_snake_logo.svg", "description": "Produtos premium com iluminação Chroma e precisão absoluta." },
+      { "name": "ROG", "image_url": "https://upload.wikimedia.org/wikipedia/commons/5/53/Republic_of_Gamers_Logo.svg", "description": "A linha de elite da ASUS para overclocking e performance máxima." }
+    ],
+    "mobile": [
+      { "name": "Galaxy", "image_url": "https://upload.wikimedia.org/wikipedia/commons/b/b4/Samsung_Galaxy_logo.svg", "description": "Os smartphones mais versáteis e potentes do ecossistema Android." },
+      { "name": "iPhone", "image_url": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg", "description": "Referência em fotografia móvel e fluidez operacional." },
+      { "name": "Motorola", "image_url": "https://upload.wikimedia.org/wikipedia/commons/2/2d/Motorola_logo.svg", "description": "Bateria de longa duração e Android puro para usuários práticos." },
+      { "name": "Pixel", "image_url": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg", "description": "A experiência definitiva do Google com inteligência artificial pura." },
+      { "name": "Realme", "image_url": "https://upload.wikimedia.org/wikipedia/commons/1/10/Realme_logo.svg", "description": "Design moderno e carregamento ultrarrápido para jovens." },
+      { "name": "Redmi", "image_url": "https://upload.wikimedia.org/wikipedia/commons/d/da/Redmi_logo.svg", "description": "O melhor custo-benefício em smartphones com alta autonomia." },
+      { "name": "Xiaomi", "image_url": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Xiaomi_logo_%282021-present%29.svg", "description": "Inovação global em smartphones e gadgets inteligentes." }
+    ],
+    "monitors_and_video": [
+      { "name": "AOC", "image_url": "https://upload.wikimedia.org/wikipedia/commons/d/df/AOC_Logo.svg", "description": "Monitores gamers com alta taxa de atualização e preço justo." },
+      { "name": "BenQ", "image_url": "https://upload.wikimedia.org/wikipedia/commons/b/bf/BenQ_logo.svg", "description": "Precisão de cor e tecnologias para proteção ocular em monitores." },
+      { "name": "Dell", "image_url": "https://upload.wikimedia.org/wikipedia/commons/4/48/Dell_Logo.svg", "description": "Referência em monitores de produtividade e fidelidade visual." },
+      { "name": "LG", "image_url": "https://upload.wikimedia.org/wikipedia/commons/b/bf/LG_logo_%282015%29.svg", "description": "Inovação em painéis OLED e monitores UltraWide imersivos." },
+      { "name": "Samsung", "image_url": "https://upload.wikimedia.org/wikipedia/commons/2/24/Samsung_Logo.svg", "description": "Telas curvas e displays de alta definição para entretenimento." }
+    ],
+    "processing_and_hardware": [
+      { "name": "AMD", "image_url": "https://upload.wikimedia.org/wikipedia/commons/7/7c/AMD_Logo.svg", "description": "Processadores Ryzen e placas Radeon com poder incrível." },
+      { "name": "Corsair", "image_url": "https://upload.wikimedia.org/wikipedia/commons/1/16/Corsair_Logo.svg", "description": "Memórias, fontes e refrigeração de alto padrão para entusiastas." },
+      { "name": "EVGA", "image_url": "https://upload.wikimedia.org/wikipedia/commons/b/b5/EVGA_logo.svg", "description": "Produtos de hardware confiáveis com garantia superior." },
+      { "name": "Gigabyte", "image_url": "https://upload.wikimedia.org/wikipedia/commons/d/db/Gigabyte_logo.svg", "description": "Placas-mãe e componentes duráveis para uso intensivo." },
+      { "name": "Intel", "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/c9/Intel-logo.svg", "description": "Líder mundial em tecnologia de microprocessadores." },
+      { "name": "Kingston", "image_url": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Kingston_Technology_logo.svg", "description": "Soluções de memória e SSDs rápidos e acessíveis." },
+      { "name": "Noctua", "image_url": "https://upload.wikimedia.org/wikipedia/fr/4/48/Noctua_logo.png", "description": "O auge do resfriamento silencioso e eficiência térmica." },
+      { "name": "NVIDIA", "image_url": "https://upload.wikimedia.org/wikipedia/sco/2/21/Nvidia_logo.svg", "description": "Poder visual absoluto para games e inteligência artificial." },
+      { "name": "NZXT", "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/30/NZXT_Logo.svg", "description": "Gabinetes minimalistas e soluções de refrigeração inteligente." },
+      { "name": "Thermal Grizzly", "image_url": "https://www.thermal-grizzly.com/images/logos/TG_Logo_Red_Black.svg", "description": "Pastas térmicas premium para o máximo de resfriamento." }
+    ],
+    "network_and_connectivity": [
+      { "name": "Asus", "image_url": "https://upload.wikimedia.org/wikipedia/commons/d/de/Asus_Logo.svg", "description": "Roteadores de alto alcance e placas de rede gamers." },
+      { "name": "D-Link", "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/3b/D-Link_logo.svg", "description": "Soluções de conectividade simples e eficientes para o dia a dia." },
+      { "name": "Eero", "image_url": "https://upload.wikimedia.org/wikipedia/commons/b/b3/Eero_logo.svg", "description": "Sistemas Wi-Fi Mesh para cobertura total e inteligente." },
+      { "name": "Intelbras", "image_url": "https://upload.wikimedia.org/wikipedia/commons/e/e6/Intelbras_logo.svg", "description": "Segurança e rede de confiança com suporte nacional." },
+      { "name": "Tenda", "image_url": "https://upload.wikimedia.org/wikipedia/commons/2/23/Tenda_logo.svg", "description": "Networking acessível com tecnologias modernas de sinal." },
+      { "name": "TP-Link", "image_url": "https://upload.wikimedia.org/wikipedia/commons/d/d4/TP-Link_logo.svg", "description": "Líder global em dispositivos de rede residenciais e empresariais." },
+      { "name": "Ubiquiti", "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Ubiquiti_Networks_logo.svg", "description": "Redes profissionais com gerenciamento avançado e estabilidade." }
+    ],
+    "software_brands": [
+      { "name": "Adobe", "image_url": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Adobe_Systems_logo_and_wordmark.svg", "description": "O padrão da indústria para criatividade e design gráfico." },
+      { "name": "Autodesk", "image_url": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Autodesk_logo.svg", "description": "Software líder para engenharia, arquitetura e modelagem 3D." },
+      { "name": "Bitdefender", "image_url": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Bitdefender_logo.svg", "description": "Cibersegurança premiada para proteger todos os seus dispositivos." },
+      { "name": "Corel", "image_url": "https://upload.wikimedia.org/wikipedia/commons/4/4d/Corel_Logo.svg", "description": "Ferramentas poderosas para ilustração vetorial e produtividade." },
+      { "name": "Kaspersky", "image_url": "https://upload.wikimedia.org/wikipedia/commons/b/bd/Kaspersky_logo.svg", "description": "Proteção global robusta contra ameaças digitais complexas." },
+      { "name": "Microsoft", "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/96/Microsoft_logo_%282012%29.svg", "description": "Sistemas operacionais e suítes de escritório essenciais." },
+      { "name": "Norton", "image_url": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Norton_LifeLock_logo.svg", "description": "Segurança online abrangente com VPN e proteção de identidade." },
+      { "name": "VMware", "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Vmware.svg", "description": "Líder em virtualização de sistemas para nuvem e desktop." }
+    ]
+  }
+}

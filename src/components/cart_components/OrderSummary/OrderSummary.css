@@ -169,8 +169,13 @@
   transition: background-color 0.2s;
 }
 
-.os-checkout-btn:hover {
+.os-checkout-btn:hover:not(:disabled) {
   background-color: #1d4ed8;
+}
+
+.os-checkout-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .os-secure-trust {

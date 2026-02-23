@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Menu, X, ShoppingCart, User, Search, Truck, HelpCircle, PackageSearch } from 'lucide-react';
+import { useCart } from '@/context/CartContext';
 import styles from './Header.module.css';
 import ThemeToggle from '../ThemeToggle';
 
@@ -11,6 +12,12 @@ export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const pathname = usePathname();
+  const { cartCount } = useCart();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -59,7 +66,9 @@ export default function Header() {
               <Link href="/cart" className={styles.actionBtn}>
                 <div className={styles.cartWrapper}>
                   <ShoppingCart size={20} />
-                  <span className={styles.cartBadge}>3</span>
+                  {mounted && cartCount > 0 && (
+                    <span className={styles.cartBadge}>{cartCount}</span>
+                  )}
                 </div>
               </Link>
               
