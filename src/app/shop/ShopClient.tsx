@@ -34,16 +34,17 @@ export default function ShopClient() {
     setSelectedBrands([]);
   };
 
-  const parsePrice = (priceStr: string) => {
-    // Remove currency symbol and comma separators, then parse to float
-    return parseFloat(priceStr.replace(/[^0-9.-]+/g, ''));
+  const parsePrice = (priceStr: string | undefined | null) => {
+    if (!priceStr) return 0; // Se não houver preço, retorna 0 em vez de quebrar
+    // Garante que é string e remove símbolos
+    return parseFloat(String(priceStr).replace(/[^0-9.-]+/g, '')) || 0;
   };
 
   const filteredProducts = mockProducts.filter((product) => {
-    const priceValue = parsePrice(product.price);
+    const priceValue = parsePrice(product.currentPrice);
     if (priceValue > priceRange) return false;
 
-    if (selectedCategories.length > 0 && !selectedCategories.includes(product.category)) return false;
+    if (selectedCategories.length > 0 && !selectedCategories.includes(product.category_slug)) return false;
 
     if (selectedCondition) {
       const isNew = product.badge?.type === 'new';
@@ -71,9 +72,9 @@ export default function ShopClient() {
   const sortedProducts = [...filteredProducts].sort((a, b) => {
     switch (sortBy) {
       case 'Price: Low to High':
-        return parsePrice(a.price) - parsePrice(b.price);
+        return parsePrice(a.currentPrice) - parsePrice(b.currentPrice);
       case 'Price: High to Low':
-        return parsePrice(b.price) - parsePrice(a.price);
+        return parsePrice(b.currentPrice) - parsePrice(a.currentPrice);
       case 'Newest Arrivals':
         return b.id - a.id; // Assuming higher ID means newer
       case 'Best Reviews':

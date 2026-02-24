@@ -13,13 +13,16 @@ interface Badge {
 
 export interface Product {
   id: number;
-  badge: Badge | null;
+  badge?: Badge | null;
   image: string;
-  category: string;
+  category_slug: string;
   title: string;
   rating: number;
   reviews: number;
-  price: string;
+  currentPrice: string;
+  originalPrice?: string;
+  brand?: string;
+  attributes?: Record<string, string>;
 }
 
 interface CardProductProps {
@@ -46,7 +49,7 @@ export default function CardProduct({ product }: CardProductProps) {
         <img src={product.image} alt={product.title} className="product-image" />
       </Link>
       <div className="product-info">
-        <span className="product-category">{product.category}</span>
+        <span className="product-category">{product.category_slug}</span>
         <Link href={`/shop/${product.id}`} style={{ textDecoration: 'none' }}>
           <h3 className="product-title">{product.title}</h3>
         </Link>
@@ -70,7 +73,7 @@ export default function CardProduct({ product }: CardProductProps) {
           <span className="rating-count">({product.reviews})</span>
         </div>
         <div className="product-footer-clean">
-          <span className="current-price">{product.price}</span>
+          <span className="current-price">{product.currentPrice}</span>
           <button 
             className={`btn-add-cart-icon ${added ? 'added' : ''}`} 
             aria-label="Add to cart"

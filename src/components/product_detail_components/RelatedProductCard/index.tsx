@@ -34,7 +34,7 @@ export default function RelatedProductCard({ product }: RelatedProductCardProps)
       </Link>
       
       <div className="rpc-info">
-        <span className="rpc-category">{product.category}</span>
+        <span className="rpc-category">{product.category_slug}</span>
         
         <Link href={`/shop/${product.id}`} style={{ textDecoration: 'none' }}>
           <h3 className="rpc-title" title={product.title}>
@@ -67,7 +67,7 @@ export default function RelatedProductCard({ product }: RelatedProductCardProps)
         <hr className="rpc-divider" />
         
         <div className="rpc-footer">
-          <span className="rpc-price">{product.price}</span>
+          <span className="rpc-price">{product.currentPrice}</span>
           <button 
             className={`rpc-btn-add ${added ? 'added' : ''}`}
             onClick={handleAddToCart}

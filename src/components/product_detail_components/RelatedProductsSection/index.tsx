@@ -28,7 +28,7 @@ export default function RelatedProductsSection({ currentProduct, allProducts }: 
 
   // Show ALL products from the exact same category, excluding the current one
   const relatedProducts = allProducts.filter(
-    p => p.category === currentProduct.category && p.id !== currentProduct.id
+    p => p.category_slug === currentProduct.category_slug && p.id !== currentProduct.id
   );
 
   return (

@@ -5,90 +5,90 @@
       "category": "Hardware",
       "presentation": "Componentes fundamentais para construir ou dar um upgrade no poder de processamento do seu setup.",
       "subcategories": [
-        { "name": "Processors (CPU)", "image_url": "https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?auto=format&fit=crop&q=80&w=800", "description": "Unidades centrais de processamento para alta performance em jogos e trabalho." },
-        { "name": "Graphics Cards (GPU)", "image_url": "https://images.unsplash.com/photo-1591488320449-011701bb6704?auto=format&fit=crop&q=80&w=800", "description": "Placas de vídeo de última geração para gráficos realistas e Ray Tracing." },
-        { "name": "Motherboards", "image_url": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=800", "description": "Placas-mãe robustas com suporte aos chipsets mais recentes do mercado." },
-        { "name": "RAM Memory", "image_url": "https://images.unsplash.com/photo-1562976540-1502c2145186?auto=format&fit=crop&q=80&w=800", "description": "Memórias DDR4 e DDR5 de alta frequência para multitarefa sem travamentos." },
-        { "name": "Storage (SSD/HDD)", "image_url": "https://images.unsplash.com/photo-1544652478-6653e09f18a2?auto=format&fit=crop&q=80&w=800", "description": "Armazenamento rápido em SSDs NVMe e HDDs de grande capacidade." },
-        { "name": "Power Supplies", "image_url": "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&q=80&w=800", "description": "Fontes de alimentação eficientes com certificações de segurança avançadas." },
-        { "name": "Cases/Chassis", "image_url": "https://images.unsplash.com/photo-1547082299-de196ea013d6?auto=format&fit=crop&q=80&w=800", "description": "Gabinetes com design moderno e excelente fluxo de ar para seus componentes." }
+        { "name": "Processors (CPU)", "category_slug": "processors-cpu", "image_url": "https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?auto=format&fit=crop&q=80&w=800", "description": "Unidades centrais de processamento para alta performance em jogos e trabalho." },
+        { "name": "Graphics Cards (GPU)", "category_slug": "graphics-cards-gpu", "image_url": "https://images.unsplash.com/photo-1591488320449-011701bb6704?auto=format&fit=crop&q=80&w=800", "description": "Placas de vídeo de última geração para gráficos realistas e Ray Tracing." },
+        { "name": "Motherboards", "category_slug": "motherboards", "image_url": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=800", "description": "Placas-mãe robustas com suporte aos chipsets mais recentes do mercado." },
+        { "name": "RAM Memory", "category_slug": "ram-memory", "image_url": "https://images.unsplash.com/photo-1562976540-1502c2145186?auto=format&fit=crop&q=80&w=800", "description": "Memórias DDR4 e DDR5 de alta frequência para multitarefa sem travamentos." },
+        { "name": "Storage (SSD/HDD)", "category_slug": "storage-ssd", "image_url": "https://images.unsplash.com/photo-1544652478-6653e09f18a2?auto=format&fit=crop&q=80&w=800", "description": "Armazenamento rápido em SSDs NVMe e HDDs de grande capacidade." },
+        { "name": "Power Supplies", "category_slug": "power-supplies", "image_url": "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&q=80&w=800", "description": "Fontes de alimentação eficientes com certificações de segurança avançadas." },
+        { "name": "Cases/Chassis", "category_slug": "cases-chassis", "image_url": "https://images.unsplash.com/photo-1547082299-de196ea013d6?auto=format&fit=crop&q=80&w=800", "description": "Gabinetes com design moderno e excelente fluxo de ar para seus componentes." }
       ]
     },
     {
       "category": "Power and Cooling",
       "presentation": "Soluções térmicas e de energia para garantir a longevidade e estabilidade do seu hardware.",
       "subcategories": [
-        { "name": "Power Supply Units", "image_url": "https://images.unsplash.com/photo-1591489378430-ef2f4c626b35?auto=format&fit=crop&q=80&w=800", "description": "Unidades de força com gerenciamento de cabos modular e alta eficiência." },
-        { "name": "Power Cables", "image_url": "https://images.unsplash.com/photo-1555664424-778a1e5e1b48?auto=format&fit=crop&q=80&w=800", "description": "Cabos de energia padrão reforçados para conexões seguras." },
-        { "name": "Braided Power Supply Cables", "image_url": "https://m.media-amazon.com/images/I/71uV6W9UuSL._AC_SL1500_.jpg", "description": "Cabos revestidos em malha para um acabamento estético superior no PC." },
-        { "name": "ARGB Power Supply Extension Cables", "image_url": "https://m.media-amazon.com/images/I/61N+6pL1FfL._AC_SL1200_.jpg", "description": "Extensores com iluminação RGB sincronizável para destacar seu setup." },
-        { "name": "Processor Cooling (Air/Water)", "image_url": "https://images.unsplash.com/photo-1614935151651-0bea6508db6b?auto=format&fit=crop&q=80&w=800", "description": "Coolers a ar e sistemas de refrigeração líquida de alto desempenho." },
-        { "name": "LED Lighting", "image_url": "https://images.unsplash.com/photo-1543196614-e046c7d3d82e?auto=format&fit=crop&q=80&w=800", "description": "Fitas LED e fitas ARGB para iluminação interna customizada." },
-        { "name": "Thermal Paste", "image_url": "https://m.media-amazon.com/images/I/61N9A9vU7AL._AC_SL1500_.jpg", "description": "Pastas térmicas de alta condutividade para controle de temperatura." },
-        { "name": "Extra Case Fans", "image_url": "https://images.unsplash.com/photo-1616333202970-870020689e47?auto=format&fit=crop&q=80&w=800", "description": "Ventoinhas adicionais para otimizar o resfriamento do gabinete." },
-        { "name": "Fan Controllers", "image_url": "https://m.media-amazon.com/images/I/61VvG0Wp2WL._AC_SL1200_.jpg", "description": "Hubs de controle para gerenciar velocidade e cores das fans." }
+        { "name": "Power Supply Units", "category_slug": "psu-units", "image_url": "https://images.unsplash.com/photo-1591489378430-ef2f4c626b35?auto=format&fit=crop&q=80&w=800", "description": "Unidades de força com gerenciamento de cabos modular e alta eficiência." },
+        { "name": "Power Cables", "category_slug": "power-cables", "image_url": "https://images.unsplash.com/photo-1555664424-778a1e5e1b48?auto=format&fit=crop&q=80&w=800", "description": "Cabos de energia padrão reforçados para conexões seguras." },
+        { "name": "Braided Power Supply Cables", "category_slug": "braided-cables", "image_url": "https://m.media-amazon.com/images/I/71uV6W9UuSL._AC_SL1500_.jpg", "description": "Cabos revestidos em malha para um acabamento estético superior no PC." },
+        { "name": "ARGB Power Supply Extension Cables", "category_slug": "argb-cables", "image_url": "https://m.media-amazon.com/images/I/61N+6pL1FfL._AC_SL1200_.jpg", "description": "Extensores com iluminação RGB sincronizável para destacar seu setup." },
+        { "name": "Processor Cooling (Air/Water)", "category_slug": "processor-cooling", "image_url": "https://images.unsplash.com/photo-1614935151651-0bea6508db6b?auto=format&fit=crop&q=80&w=800", "description": "Coolers a ar e sistemas de refrigeração líquida de alto desempenho." },
+        { "name": "LED Lighting", "category_slug": "led-lighting", "image_url": "https://images.unsplash.com/photo-1543196614-e046c7d3d82e?auto=format&fit=crop&q=80&w=800", "description": "Fitas LED e fitas ARGB para iluminação interna customizada." },
+        { "name": "Thermal Paste", "category_slug": "thermal-paste", "image_url": "https://m.media-amazon.com/images/I/61N9A9vU7AL._AC_SL1500_.jpg", "description": "Pastas térmicas de alta condutividade para controle de temperatura." },
+        { "name": "Extra Case Fans", "category_slug": "extra-fans", "image_url": "https://images.unsplash.com/photo-1616333202970-870020689e47?auto=format&fit=crop&q=80&w=800", "description": "Ventoinhas adicionais para otimizar o resfriamento do gabinete." },
+        { "name": "Fan Controllers", "category_slug": "fan-controllers", "image_url": "https://m.media-amazon.com/images/I/61VvG0Wp2WL._AC_SL1200_.jpg", "description": "Hubs de controle para gerenciar velocidade e cores das fans." }
       ]
     },
     {
       "category": "System Refinements",
       "presentation": "Upgrades específicos para conectividade e recursos multimídia avançados.",
       "subcategories": [
-        { "name": "Internal Sound Cards", "image_url": "https://images.unsplash.com/photo-1555617766-c94804975da3?auto=format&fit=crop&q=80&w=800", "description": "Placas de áudio internas para som cristalino em alta definição." },
-        { "name": "External Sound Cards", "image_url": "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?auto=format&fit=crop&q=80&w=800", "description": "Interfaces de áudio USB para músicos e audiófilos exigentes." },
-        { "name": "Network Cards", "image_url": "https://m.media-amazon.com/images/I/718M9M3vVpL._AC_SL1500_.jpg", "description": "Adaptadores de rede cabeada Gigabit e 10G para ultra velocidade." },
-        { "name": "Wireless Network Cards", "image_url": "https://m.media-amazon.com/images/I/61+9EonM6uL._AC_SL1500_.jpg", "description": "Placas Wi-Fi com antenas potentes para conexões sem fio estáveis." },
-        { "name": "Wireless Routers/HomePlugs", "image_url": "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&q=80&w=800", "description": "Roteadores Mesh e extensores de rede para cobertura total da casa." },
-        { "name": "USB/Thunderbolt Options", "image_url": "https://images.unsplash.com/photo-1614624532983-4ce03382d63d?auto=format&fit=crop&q=80&w=800", "description": "Placas de expansão para portas USB-C e Thunderbolt de alta velocidade." },
-        { "name": "Capture/Streaming Cards", "image_url": "https://images.unsplash.com/photo-1593305841991-05c297ba4575?auto=format&fit=crop&q=80&w=800", "description": "Placas de captura internas para streamers e criadores de conteúdo." },
-        { "name": "External Capture Cards", "image_url": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&q=80&w=800", "description": "Dispositivos de captura externos USB para consoles e PCs." },
-        { "name": "Firewire", "image_url": "https://m.media-amazon.com/images/I/517iCscQ2BL._AC_SL1000_.jpg", "description": "Adaptadores Firewire para dispositivos legados de áudio e vídeo." }
+        { "name": "Internal Sound Cards", "category_slug": "sound-cards-internal", "image_url": "https://images.unsplash.com/photo-1555617766-c94804975da3?auto=format&fit=crop&q=80&w=800", "description": "Placas de áudio internas para som cristalino em alta definição." },
+        { "name": "External Sound Cards", "category_slug": "sound-cards-external", "image_url": "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?auto=format&fit=crop&q=80&w=800", "description": "Interfaces de áudio USB para músicos e audiófilos exigentes." },
+        { "name": "Network Cards", "category_slug": "network-cards-wired", "image_url": "https://m.media-amazon.com/images/I/718M9M3vVpL._AC_SL1500_.jpg", "description": "Adaptadores de rede cabeada Gigabit e 10G para ultra velocidade." },
+        { "name": "Wireless Network Cards", "category_slug": "network-cards-wireless", "image_url": "https://m.media-amazon.com/images/I/61+9EonM6uL._AC_SL1500_.jpg", "description": "Placas Wi-Fi com antenas potentes para conexões sem fio estáveis." },
+        { "name": "Wireless Routers/HomePlugs", "category_slug": "routers-mesh", "image_url": "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&q=80&w=800", "description": "Roteadores Mesh e extensores de rede para cobertura total da casa." },
+        { "name": "USB/Thunderbolt Options", "category_slug": "usb-thunderbolt-expansion", "image_url": "https://images.unsplash.com/photo-1614624532983-4ce03382d63d?auto=format&fit=crop&q=80&w=800", "description": "Placas de expansão para portas USB-C e Thunderbolt de alta velocidade." },
+        { "name": "Capture/Streaming Cards", "category_slug": "capture-cards-internal", "image_url": "https://images.unsplash.com/photo-1593305841991-05c297ba4575?auto=format&fit=crop&q=80&w=800", "description": "Placas de captura internas para streamers e criadores de conteúdo." },
+        { "name": "External Capture Cards", "category_slug": "capture-cards-external", "image_url": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&q=80&w=800", "description": "Dispositivos de captura externos USB para consoles e PCs." },
+        { "name": "Firewire", "category_slug": "firewire-adapters", "image_url": "https://m.media-amazon.com/images/I/517iCscQ2BL._AC_SL1000_.jpg", "description": "Adaptadores Firewire para dispositivos legados de áudio e vídeo." }
       ]
     },
     {
       "category": "Software and Operating Systems",
       "presentation": "As ferramentas essenciais para produtividade, segurança e funcionamento do seu computador.",
       "subcategories": [
-        { "name": "Operating Systems", "image_url": "https://images.unsplash.com/photo-1624555130581-1d9cca783bc0?auto=format&fit=crop&q=80&w=800", "description": "Licenças originais de Windows e outros sistemas operacionais." },
-        { "name": "Office & Productivity", "image_url": "https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&q=80&w=800", "description": "Suítes de aplicativos para edição de documentos e planilhas." },
-        { "name": "Antivirus & Security", "image_url": "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=800", "description": "Proteção avançada contra vírus, malwares e ataques digitais." },
-        { "name": "Design & Creative Tools", "image_url": "https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&q=80&w=800", "description": "Software profissional para edição de fotos, vídeos e artes gráficas." },
-        { "name": "Backup & Recovery", "image_url": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=80&w=800", "description": "Ferramentas para proteção de dados e recuperação de arquivos perdidos." },
-        { "name": "Server Software", "image_url": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=80&w=800", "description": "Sistemas de gerenciamento para servidores empresariais e bancos de dados." }
+        { "name": "Operating Systems", "category_slug": "os-license", "image_url": "https://images.unsplash.com/photo-1624555130581-1d9cca783bc0?auto=format&fit=crop&q=80&w=800", "description": "Licenças originais de Windows e outros sistemas operacionais." },
+        { "name": "Office & Productivity", "category_slug": "office-software", "image_url": "https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&q=80&w=800", "description": "Suítes de aplicativos para edição de documentos e planilhas." },
+        { "name": "Antivirus & Security", "category_slug": "antivirus-security", "image_url": "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=800", "description": "Proteção avançada contra vírus, malwares e ataques digitais." },
+        { "name": "Design & Creative Tools", "category_slug": "design-software", "image_url": "https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&q=80&w=800", "description": "Software profissional para edição de fotos, vídeos e artes gráficas." },
+        { "name": "Backup & Recovery", "category_slug": "backup-software", "image_url": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=80&w=800", "description": "Ferramentas para proteção de dados e recuperação de arquivos perdidos." },
+        { "name": "Server Software", "category_slug": "server-software", "image_url": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=80&w=800", "description": "Sistemas de gerenciamento para servidores empresariais e bancos de dados." }
       ]
     },
     {
       "category": "Computers",
       "presentation": "Máquinas completas e configuradas, prontas para atender desde o usuário básico ao profissional.",
       "subcategories": [
-        { "name": "Gaming PCs", "image_url": "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&q=80&w=800", "description": "Computadores potentes focados em máximo desempenho em jogos." },
-        { "name": "Office/Home PCs", "image_url": "https://images.unsplash.com/photo-1593640483413-5da7ee5169c2?auto=format&fit=crop&q=80&w=800", "description": "Desktops confiáveis para tarefas diárias e produtividade no escritório." },
-        { "name": "Workstations", "image_url": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=800", "description": "Estações de trabalho otimizadas para engenharia e renderização." },
-        { "name": "Laptops/Notebooks", "image_url": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&q=80&w=800", "description": "Portáteis de alto desempenho para levar seu trabalho onde quiser." },
-        { "name": "Upgrade Kits", "image_url": "https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?auto=format&fit=crop&q=80&w=800", "description": "Combos de CPU, Memória e Placa-mãe para renovar seu PC." },
-        { "name": "Custom PC Builder", "image_url": "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&q=80&w=800", "description": "Ferramenta interativa para você montar o computador dos seus sonhos." }
+        { "name": "Gaming PCs", "category_slug": "gaming-desktops", "image_url": "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&q=80&w=800", "description": "Computadores potentes focados em máximo desempenho em jogos." },
+        { "name": "Office/Home PCs", "category_slug": "home-office-pcs", "image_url": "https://images.unsplash.com/photo-1593640483413-5da7ee5169c2?auto=format&fit=crop&q=80&w=800", "description": "Desktops confiáveis para tarefas diárias e produtividade no escritório." },
+        { "name": "Workstations", "category_slug": "workstations", "image_url": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=800", "description": "Estações de trabalho otimizadas para engenharia e renderização." },
+        { "name": "Laptops/Notebooks", "category_slug": "computadores-portateis", "image_url": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&q=80&w=800", "description": "Portáteis de alto desempenho para levar seu trabalho onde quiser." },
+        { "name": "Upgrade Kits", "category_slug": "upgrade-kits", "image_url": "https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?auto=format&fit=crop&q=80&w=800", "description": "Combos de CPU, Memória e Placa-mãe para renovar seu PC." },
+        { "name": "Custom PC Builder", "category_slug": "custom-pc-builder", "image_url": "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&q=80&w=800", "description": "Ferramenta interativa para você montar o computador dos seus sonhos." }
       ]
     },
     {
       "category": "Peripherals",
       "presentation": "Os melhores acessórios para melhorar sua interação e experiência com o computador.",
       "subcategories": [
-        { "name": "Keyboards", "image_url": "https://images.unsplash.com/photo-1511467687858-23d96c32e4ae?auto=format&fit=crop&q=80&w=800", "description": "Teclados mecânicos e de membrana para digitação e jogos." },
-        { "name": "Mice", "image_url": "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?auto=format&fit=crop&q=80&w=800", "description": "Mouses ergonômicos e gamers com sensores de alta precisão." },
-        { "name": "Headsets", "image_url": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&q=80&w=800", "description": "Fones de ouvido com microfone para imersão total e comunicação." },
-        { "name": "Mousepads", "image_url": "https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?auto=format&fit=crop&q=80&w=800", "description": "Superfícies de alta performance para deslize perfeito do mouse." },
-        { "name": "Monitors", "image_url": "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?auto=format&fit=crop&q=80&w=800", "description": "Telas 4K, UltraWide e de alta taxa de atualização para imagens vivas." },
-        { "name": "Webcams", "image_url": "https://images.unsplash.com/photo-1583394138182-2f7637c52e45?auto=format&fit=crop&q=80&w=800", "description": "Câmeras HD e 4K para reuniões online e streaming de qualidade." },
-        { "name": "Microphones", "image_url": "https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&q=80&w=800", "description": "Microfones condensadores para podcasts e lives profissionais." }
+        { "name": "Keyboards", "category_slug": "keyboards", "image_url": "https://images.unsplash.com/photo-1511467687858-23d96c32e4ae?auto=format&fit=crop&q=80&w=800", "description": "Teclados mecânicos e de membrana para digitação e jogos." },
+        { "name": "Mice", "category_slug": "mice", "image_url": "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?auto=format&fit=crop&q=80&w=800", "description": "Mouses ergonômicos e gamers com sensores de alta precisão." },
+        { "name": "Headsets", "category_slug": "headsets", "image_url": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&q=80&w=800", "description": "Fones de ouvido com microfone para imersão total e comunicação." },
+        { "name": "Mousepads", "category_slug": "mousepads", "image_url": "https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?auto=format&fit=crop&q=80&w=800", "description": "Superfícies de alta performance para deslize perfeito do mouse." },
+        { "name": "Monitors", "category_slug": "monitors", "image_url": "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?auto=format&fit=crop&q=80&w=800", "description": "Telas 4K, UltraWide e de alta taxa de atualização para imagens vivas." },
+        { "name": "Webcams", "category_slug": "webcams", "image_url": "https://images.unsplash.com/photo-1583394138182-2f7637c52e45?auto=format&fit=crop&q=80&w=800", "description": "Câmeras HD e 4K para reuniões online e streaming de qualidade." },
+        { "name": "Microphones", "category_slug": "microphones", "image_url": "https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&q=80&w=800", "description": "Microfones condensadores para podcasts e lives profissionais." }
       ]
     },
     {
       "category": "Consoles and Gaming",
       "presentation": "O universo dos videogames na palma da sua mão. Consoles e controles oficiais.",
       "subcategories": [
-        { "name": "PlayStation", "image_url": "https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?auto=format&fit=crop&q=80&w=800", "description": "Consoles e jogos exclusivos da plataforma Sony PlayStation." },
-        { "name": "Xbox", "image_url": "https://images.unsplash.com/photo-1605901309584-818e25960a8f?auto=format&fit=crop&q=80&w=800", "description": "Ecossistema Microsoft Xbox com Game Pass e consoles poderosos." },
-        { "name": "Nintendo", "image_url": "https://images.unsplash.com/photo-1578303512597-81e6cc155b3e?auto=format&fit=crop&q=80&w=800", "description": "A diversão portátil e caseira com o Nintendo Switch e acessórios." },
-        { "name": "Controllers and Accessories", "image_url": "https://images.unsplash.com/photo-1592840331052-16e15c2c6f95?auto=format&fit=crop&q=80&w=800", "description": "Controles extras, capas e acessórios para todos os consoles." }
+        { "name": "PlayStation", "category_slug": "playstation-consoles", "image_url": "https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?auto=format&fit=crop&q=80&w=800", "description": "Consoles e jogos exclusivos da plataforma Sony PlayStation." },
+        { "name": "Xbox", "category_slug": "xbox-consoles", "image_url": "https://images.unsplash.com/photo-1605901309584-818e25960a8f?auto=format&fit=crop&q=80&w=800", "description": "Ecossistema Microsoft Xbox com Game Pass e consoles poderosos." },
+        { "name": "Nintendo", "category_slug": "nintendo-consoles", "image_url": "https://images.unsplash.com/photo-1578303512597-81e6cc155b3e?auto=format&fit=crop&q=80&w=800", "description": "A diversão portátil e caseira com o Nintendo Switch e acessórios." },
+        { "name": "Controllers and Accessories", "category_slug": "game-controllers", "image_url": "https://images.unsplash.com/photo-1592840331052-16e15c2c6f95?auto=format&fit=crop&q=80&w=800", "description": "Controles extras, capas e acessórios para todos os consoles." }
       ]
     }
   ],

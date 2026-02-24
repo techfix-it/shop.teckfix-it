@@ -30,7 +30,7 @@ export default function ProductDetailClient({ product, allProducts }: { product:
   ];
 
   // Price conversion (mock logic for the discount shown in screenshot)
-  const priceNum = parseFloat(product.price.replace('€', '').replace(',', ''));
+  const priceNum = parseFloat(String(product.currentPrice || '').replace(/[^0-9.-]+/g, '')) || 0;
   const oldPrice = '€' + (priceNum * 1.1).toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 });
   const monthly = '€' + (priceNum / 12).toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 
@@ -52,7 +52,7 @@ export default function ProductDetailClient({ product, allProducts }: { product:
       <nav className="product-breadcrumb">
         <Link href="/">Home</Link>
         <ChevronRight size={14} />
-        <Link href={`/shop?category=${product.category.toLowerCase().replace(/ /g, '-')}`}>{product.category}</Link>
+        <Link href={`/shop?category=${(product.category_slug || '').toLowerCase().replace(/ /g, '-')}`}>{product.category_slug}</Link>
         <ChevronRight size={14} />
         <span className="current-crumb">{product.title}</span>
       </nav>
@@ -91,7 +91,7 @@ export default function ProductDetailClient({ product, allProducts }: { product:
           
           <h1 className="product-title">{product.title}</h1>
           <p className="product-description">
-             High-performance {product.category.toLowerCase()} designed for demanding tasks. Built with premium components to ensure maximum reliability and speed.
+             High-performance {(product.category_slug || '').toLowerCase()} designed for demanding tasks. Built with premium components to ensure maximum reliability and speed.
           </p>
 
           <div className="product-meta">
@@ -111,7 +111,7 @@ export default function ProductDetailClient({ product, allProducts }: { product:
 
           <div className="product-price-box">
              <div className="price-main">
-               <span className="current-price">{product.price}</span>
+               <span className="current-price">{product.currentPrice}</span>
                <span className="old-price">{oldPrice}</span>
              </div>
              <div className="price-monthly">
