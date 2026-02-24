@@ -1,5 +1,9 @@
 import { Filter, X } from 'lucide-react';
 import './SidebarFilters.css';
+import PriceRangeFilter from './PriceRangeFilter';
+import CategoryFilter from './CategoryFilter';
+import ConditionFilter from './ConditionFilter';
+import BrandFilter from './BrandFilter';
 
 interface SidebarFiltersProps {
   priceRange: number;
@@ -51,10 +55,6 @@ export default function SidebarFilters({
     );
   };
 
-  // Calculate percentage for slider fill
-  const maxPrice = 5000;
-  const sliderPercentage = (priceRange / maxPrice) * 100;
-
   return (
     <aside className={`shop-filters ${isOpen ? 'open' : ''}`}>
       <div className="filters-header-container">
@@ -72,91 +72,30 @@ export default function SidebarFilters({
       
       <div className="filter-divider"></div>
 
-      <div className="filter-section">
-        <h3 className="filter-title">PRICE RANGE</h3>
-        <div className="price-slider-mock">
-          <input 
-            type="range" 
-            min="0" 
-            max="5000" 
-            step="50"
-            value={priceRange} 
-            onChange={(e) => setPriceRange(Number(e.target.value))}
-            className="filter-range-input"
-            style={{
-              background: `linear-gradient(to right, #0c18ba 0%, #0c18ba ${sliderPercentage}%, var(--border-200) ${sliderPercentage}%, var(--border-200) 100%)`
-            }}
-          />
-          <div className="price-labels">
-            <span>€0</span>
-            <span>€{priceRange >= 5000 ? '5,000+' : priceRange.toLocaleString()}</span>
-          </div>
-        </div>
-      </div>
+      <PriceRangeFilter priceRange={priceRange} setPriceRange={setPriceRange} />
 
       <div className="filter-divider"></div>
 
-      <div className="filter-section">
-        <h3 className="filter-title">CATEGORY</h3>
-        <div className="filter-list">
-          {CATEGORIES.map(cat => (
-            <label key={cat.value} className="filter-item">
-              <input 
-                className="filter-checkbox" 
-                type="checkbox" 
-                checked={selectedCategories.includes(cat.value)}
-                onChange={() => toggleCategory(cat.value)}
-              />
-              <span className="filter-label">{cat.label}</span>
-            </label>
-          ))}
-        </div>
-      </div>
+      <CategoryFilter 
+        categories={CATEGORIES} 
+        selectedCategories={selectedCategories} 
+        toggleCategory={toggleCategory} 
+      />
 
       <div className="filter-divider"></div>
 
-      <div className="filter-section">
-        <h3 className="filter-title">CONDITION</h3>
-        <div className="filter-list">
-          <label className="filter-item">
-            <input 
-              className="filter-checkbox" 
-              type="checkbox" 
-              checked={selectedCondition === 'Brand New'}
-              onChange={() => setSelectedCondition(selectedCondition === 'Brand New' ? '' : 'Brand New')}
-            />
-            <span className="filter-label">Brand New</span>
-          </label>
-          <label className="filter-item">
-            <input 
-              className="filter-checkbox" 
-              type="checkbox" 
-              checked={selectedCondition === 'Certified Refurbished'}
-              onChange={() => setSelectedCondition(selectedCondition === 'Certified Refurbished' ? '' : 'Certified Refurbished')}
-            />
-            <span className="filter-label">Certified Refurbished</span>
-          </label>
-        </div>
-      </div>
+      <ConditionFilter 
+        selectedCondition={selectedCondition} 
+        setSelectedCondition={setSelectedCondition} 
+      />
 
       <div className="filter-divider"></div>
 
-      <div className="filter-section">
-        <h3 className="filter-title">BRAND</h3>
-        <div className="filter-list">
-          {BRANDS.map(brand => (
-            <label key={brand} className="filter-item">
-              <input 
-                className="filter-checkbox" 
-                type="checkbox" 
-                checked={selectedBrands.includes(brand)}
-                onChange={() => toggleBrand(brand)}
-              />
-              <span className="filter-label">{brand}</span>
-            </label>
-          ))}
-        </div>
-      </div>
+      <BrandFilter 
+        brands={BRANDS} 
+        selectedBrands={selectedBrands} 
+        toggleBrand={toggleBrand} 
+      />
 
       <button className="btn-clear-filters" onClick={clearFilters}>Clear All Filters</button>
     </aside>
