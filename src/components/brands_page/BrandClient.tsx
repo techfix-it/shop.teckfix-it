@@ -1,14 +1,17 @@
 'use client';
 
-import { useState, useEffect } from 'react';
-import './shop.css';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
+import { useState, useEffect, useMemo } from 'react';
+import '@/app/shop/shop.css';
 import ShopHeaderActions from '@/components/shop_components/ShopHeaderActions';
 import ProductGrid from '@/components/shop_components/ProductGrid';
 import SidebarFilters from '@/components/shop_components/SidebarFilters';
 import mockProducts from '@/app/api/test/mock/mock_products.json';
 import mockCategorias from '@/app/api/test/mock/mock_categorias.json';
+import Link from 'next/link';
+
+interface BrandClientProps {
+  brandName: string;
+}
 
 const ALL_GLOBAL_BRANDS = Array.from(new Set(
   Object.values(mockCategorias.global_brands_session).flat().map((b: any) => b.name)
@@ -24,50 +27,35 @@ const doesProductMatchBrand = (product: any, brand: string) => {
   return false;
 };
 
-export default function ShopClient() {
+export default function BrandClient({ brandName }: BrandClientProps) {
   const [viewType, setViewType] = useState<'grid' | 'list'>('grid');
   const [sortBy, setSortBy] = useState('Price: Low to High');
   const [currentPage, setCurrentPage] = useState(1);
   const [productsPerPage, setProductsPerPage] = useState(24);
+  
   // Filter States
   const [isMobileFiltersOpen, setIsMobileFiltersOpen] = useState(false);
   const [priceRange, setPriceRange] = useState<number>(25000);
   const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
   const [selectedCondition, setSelectedCondition] = useState<string>('');
-  const [selectedBrands, setSelectedBrands] = useState<string[]>([]);
+
+  // Fixed Brand (user cannot change this filter here)
+  const selectedBrands = useMemo(() => [brandName], [brandName]);
 
   const parsePrice = (priceStr: string | undefined | null) => {
-    if (!priceStr) return 0; // Se não houver preço, retorna 0 em vez de quebrar
-    // Garante que é string e remove símbolos
+    if (!priceStr) return 0;
     return parseFloat(String(priceStr).replace(/[^0-9.-]+/g, '')) || 0;
   };
 
-  // Calculate available facets dynamically
-  const getAvailableBrands = () => {
-    const brands = new Set<string>();
-    mockProducts.forEach(product => {
-      const priceValue = parsePrice(product.currentPrice);
-      if (priceValue > priceRange) return;
-      if (selectedCategories.length > 0 && !selectedCategories.includes(product.category_slug)) return;
-      if (selectedCondition) {
-        const isNew = product.badge?.type === 'new';
-        const isRefurbished = product.badge?.type === 'refurbished';
-        if (selectedCondition === 'Brand New' && !isNew) return;
-        if (selectedCondition === 'Certified Refurbished' && !isRefurbished) return;
-      }
-      brands.add(product.brand);
-      ALL_GLOBAL_BRANDS.forEach(brand => {
-        if (doesProductMatchBrand(product, brand)) {
-          brands.add(brand);
-        }
-      });
-    });
-    return brands;
-  };
+  // Only consider products matching this brand
+  const brandProducts = useMemo(() => {
+    return mockProducts.filter(product => doesProductMatchBrand(product, brandName));
+  }, [brandName]);
 
+  // Calculate available facets dynamically for the given brand
   const getAvailableCategories = () => {
     const cats = new Set<string>();
-    mockProducts.forEach(product => {
+    brandProducts.forEach(product => {
       const priceValue = parsePrice(product.currentPrice);
       if (priceValue > priceRange) return;
       if (selectedCondition) {
@@ -75,13 +63,6 @@ export default function ShopClient() {
         const isRefurbished = product.badge?.type === 'refurbished';
         if (selectedCondition === 'Brand New' && !isNew) return;
         if (selectedCondition === 'Certified Refurbished' && !isRefurbished) return;
-      }
-      if (selectedBrands.length > 0) {
-        let match = false;
-        selectedBrands.forEach(brand => {
-          if (doesProductMatchBrand(product, brand)) match = true;
-        });
-        if (!match) return;
       }
       cats.add(product.category_slug);
     });
@@ -90,70 +71,56 @@ export default function ShopClient() {
 
   const getAvailableConditions = () => {
     const conds = new Set<string>();
-    mockProducts.forEach(product => {
+    brandProducts.forEach(product => {
       const priceValue = parsePrice(product.currentPrice);
       if (priceValue > priceRange) return;
       if (selectedCategories.length > 0 && !selectedCategories.includes(product.category_slug)) return;
-      if (selectedBrands.length > 0) {
-        const matchBrand = selectedBrands.some(brand => doesProductMatchBrand(product, brand));
-        if (!matchBrand) return;
-      }
+      
       if (product.badge?.type === 'new') conds.add('Brand New');
       if (product.badge?.type === 'refurbished') conds.add('Certified Refurbished');
     });
     return conds;
   };
 
-  const availableBrands = getAvailableBrands();
   const availableCategories = getAvailableCategories();
   const availableConditions = getAvailableConditions();
+  
+  // Create a pseudo set for the brand so the sidebar doesn't hide it entirely
+  const availableBrands = new Set([brandName]);
 
-  // Reset page when sorting changes
   // Reset page when sorting or filtering changes
   useEffect(() => {
     setCurrentPage(1);
-  }, [sortBy, productsPerPage, priceRange, selectedCategories, selectedCondition, selectedBrands]);
+  }, [sortBy, productsPerPage, priceRange, selectedCategories, selectedCondition]);
 
   const clearFilters = () => {
     setPriceRange(25000);
     setSelectedCategories([]);
     setSelectedCondition('');
-    setSelectedBrands([]);
   };
 
-  const filteredProducts = mockProducts.filter((product) => {
-  // 1. Tratamento de Preço (Garante que não dá erro de replace)
-  const price = parsePrice(product.currentPrice);
+  const filteredProducts = brandProducts.filter((product) => {
+    const price = parsePrice(product.currentPrice);
+    const matchesPrice = price <= priceRange;
 
-  // 2. Filtro de Preço
-  const matchesPrice = price <= priceRange;
+    const matchesCategory =
+      selectedCategories.length === 0 ||
+      selectedCategories.includes(product.category_slug);
 
-  // 3. Filtro de Categoria (Usando o slug do novo JSON)
-  const matchesCategory =
-    selectedCategories.length === 0 ||
-    selectedCategories.includes(product.category_slug);
-
-  // 4. Filtro de Marca (Verificação usando helper robusto com global_brands_session)
-  const matchesBrand =
-    selectedBrands.length === 0 || 
-    selectedBrands.some(brand => doesProductMatchBrand(product, brand));
-
-  // 5. Filtro de Condição (Mantendo sua lógica original adaptada ao novo JSON)
-  let matchesCondition = true;
-  if (selectedCondition) {
-    const isNew = product.badge?.type === 'new';
-    const isRefurbished = product.badge?.type === 'condition grade-a'; // ou 'refurbished' dependendo do seu JSON
-    
-    if (selectedCondition === 'Brand New') {
-      matchesCondition = isNew;
-    } else if (selectedCondition === 'Certified Refurbished') {
-      matchesCondition = isRefurbished;
+    let matchesCondition = true;
+    if (selectedCondition) {
+      const isNew = product.badge?.type === 'new';
+      const isRefurbished = product.badge?.type === 'condition grade-a'; 
+      
+      if (selectedCondition === 'Brand New') {
+        matchesCondition = isNew;
+      } else if (selectedCondition === 'Certified Refurbished') {
+        matchesCondition = isRefurbished;
+      }
     }
-  }
 
-  // Retorna true apenas se passar em todos os filtros
-  return matchesPrice && matchesCategory && matchesBrand && matchesCondition;
-});
+    return matchesPrice && matchesCategory && matchesCondition;
+  });
 
   const sortedProducts = [...filteredProducts].sort((a, b) => {
     switch (sortBy) {
@@ -162,7 +129,7 @@ export default function ShopClient() {
       case 'Price: High to Low':
         return parsePrice(b.currentPrice) - parsePrice(a.currentPrice);
       case 'Newest Arrivals':
-        return b.id - a.id; // Assuming higher ID means newer
+        return b.id - a.id;
       case 'Best Reviews':
         if (b.rating !== a.rating) return b.rating - a.rating;
         return b.reviews - a.reviews;
@@ -171,20 +138,17 @@ export default function ShopClient() {
     }
   });
 
-  // Calculate pagination
   const totalProducts = sortedProducts.length;
   const totalPages = Math.ceil(totalProducts / productsPerPage);
   const indexOfLastProduct = currentPage * productsPerPage;
   const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
   const currentProducts = sortedProducts.slice(indexOfFirstProduct, indexOfLastProduct);
 
-  // Safely display range
   const displayStart = totalProducts === 0 ? 0 : indexOfFirstProduct + 1;
   const displayEnd = Math.min(indexOfLastProduct, totalProducts);
 
   return (
     <main className="shop-layout">
-      {/* Mobile Filters Overlay */}
       {isMobileFiltersOpen && (
         <div 
           className="mobile-filters-overlay" 
@@ -202,7 +166,7 @@ export default function ShopClient() {
           selectedCondition={selectedCondition}
           setSelectedCondition={setSelectedCondition}
           selectedBrands={selectedBrands}
-          setSelectedBrands={setSelectedBrands}
+          setSelectedBrands={() => {}} // Disabled for brand pages
           clearFilters={clearFilters}
           isOpen={isMobileFiltersOpen}
           setIsOpen={setIsMobileFiltersOpen}
@@ -213,6 +177,15 @@ export default function ShopClient() {
 
         {/* Product Grid Area */}
         <section className="shop-content">
+          <div className="shop-breadcrumbs" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+             <div>
+               <Link href="/">Home</Link> &gt; <span>{brandName}</span>
+             </div>
+             <div>
+                <h1 style={{fontSize: '1.5rem', fontWeight: 'bold'}}>{brandName} Store</h1>
+             </div>
+          </div>
+
           <ShopHeaderActions 
             displayStart={displayStart}
             displayEnd={displayEnd}

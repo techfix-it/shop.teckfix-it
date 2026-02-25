@@ -7,7 +7,7 @@ interface PriceRangeFilterProps {
 
 export default function PriceRangeFilter({ priceRange, setPriceRange }: PriceRangeFilterProps) {
   // Calculate percentage for slider fill
-  const maxPrice = 5000;
+  const maxPrice = 25000;
   const sliderPercentage = (priceRange / maxPrice) * 100;
 
   return (
@@ -17,8 +17,8 @@ export default function PriceRangeFilter({ priceRange, setPriceRange }: PriceRan
         <input 
           type="range" 
           min="0" 
-          max="5000" 
-          step="50"
+          max="25000" 
+          step="250"
           value={priceRange} 
           onChange={(e) => setPriceRange(Number(e.target.value))}
           className="filter-range-input"
@@ -28,7 +28,7 @@ export default function PriceRangeFilter({ priceRange, setPriceRange }: PriceRan
         />
         <div className="price-labels">
           <span>€0</span>
-          <span>€{priceRange >= 5000 ? '5,000+' : priceRange.toLocaleString()}</span>
+          <span>€{priceRange >= 25000 ? '25,000+' : priceRange.toLocaleString()}</span>
         </div>
       </div>
     </div>

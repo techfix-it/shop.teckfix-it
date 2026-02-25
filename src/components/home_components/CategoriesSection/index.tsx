@@ -17,12 +17,12 @@ const getSubcategoryImage = (name: string) => {
 const DISPLAY_CATEGORIES = [
   { 
     title: 'CPUs', 
-    query: 'cpus', 
+    query: 'processors-cpu', 
     image: getSubcategoryImage('Processors (CPU)') 
   },
   { 
     title: 'Graphics Cards', 
-    query: 'gpus', 
+    query: 'graphics-cards-gpu', 
     image: getSubcategoryImage('Graphics Cards (GPU)') 
   },
   { 
@@ -32,12 +32,12 @@ const DISPLAY_CATEGORIES = [
   },
   { 
     title: 'Networking', 
-    query: 'networking', 
+    query: 'routers', 
     image: getSubcategoryImage('Wireless Routers/HomePlugs') 
   },
   { 
     title: 'Storage', 
-    query: 'storage', 
+    query: 'storage-hdds-ssds', 
     image: getSubcategoryImage('Storage (SSD/HDD)') 
   },
   { 
@@ -61,7 +61,7 @@ export default function CategoriesSection() {
           {DISPLAY_CATEGORIES.map((category) => (
             <Link 
               key={category.query} 
-              href={`/shop?category=${category.query}`} 
+              href={`/shop/category/${category.query}`} 
               className="category-card"
             >
               {category.image && <img src={category.image} alt={category.title} />}

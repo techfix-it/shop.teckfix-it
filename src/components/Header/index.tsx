@@ -47,14 +47,14 @@ export default function Header() {
             <nav className={styles.desktopNav}>
               <Link href="/" className={styles.navLink}>Home</Link>
               <Link href="/shop" className={styles.navLink}>Shop</Link>
-              <Link href="/shop?category=gaming-pcs" className={styles.navLink}>Custom Gaming PCs</Link>
-              <Link href="/shop?category=laptops" className={styles.navLink}>Laptops</Link>
-              <Link href="/shop?category=monitors" className={styles.navLink}>Monitors</Link>
-              <Link href="/shop?category=pcs" className={styles.navLink}>PCs</Link>
-              <Link href="/shop?category=smartphones" className={styles.navLink}>Smartphones</Link>
-              <Link href="/shop?category=smartwatches" className={styles.navLink}>Smartwatches</Link>
-              <Link href="/shop?category=tablets" className={styles.navLink}>Tablets</Link>
-              <Link href="/shop?category=workstations" className={styles.navLink}>Workstations</Link>
+              <Link href="/shop/category/gaming-pcs" className={styles.navLink}>Custom Gaming PCs</Link>
+              <Link href="/shop/category/laptops" className={styles.navLink}>Laptops</Link>
+              <Link href="/shop/category/monitors" className={styles.navLink}>Monitors</Link>
+              <Link href="/shop/category/pcs" className={styles.navLink}>PCs</Link>
+              <Link href="/shop/category/smartphones" className={styles.navLink}>Smartphones</Link>
+              <Link href="/shop/category/smartwatches" className={styles.navLink}>Smartwatches</Link>
+              <Link href="/shop/category/tablets" className={styles.navLink}>Tablets</Link>
+              <Link href="/shop/category/workstations" className={styles.navLink}>Workstations</Link>
             </nav>
 
             <div className={styles.actions}>
@@ -121,14 +121,14 @@ export default function Header() {
       <div className={`${styles.mobileNav} ${isMobileMenuOpen ? styles.mobileNavOpen : ''}`}>
         <Link href="/" className={styles.mobileNavLink} onClick={() => setIsMobileMenuOpen(false)}>Home</Link>
         <Link href="/shop" className={styles.mobileNavLink} onClick={() => setIsMobileMenuOpen(false)}>Shop</Link>
-        <Link href="/shop?category=gaming-pcs" className={styles.mobileNavLink} onClick={() => setIsMobileMenuOpen(false)}>Custom Gaming PCs</Link>
-        <Link href="/shop?category=laptops" className={styles.mobileNavLink} onClick={() => setIsMobileMenuOpen(false)}>Laptops</Link>
-        <Link href="/shop?category=monitors" className={styles.mobileNavLink} onClick={() => setIsMobileMenuOpen(false)}>Monitors</Link>
-        <Link href="/shop?category=pcs" className={styles.mobileNavLink} onClick={() => setIsMobileMenuOpen(false)}>PCs</Link>
-        <Link href="/shop?category=smartphones" className={styles.mobileNavLink} onClick={() => setIsMobileMenuOpen(false)}>Smartphones</Link>
-        <Link href="/shop?category=smartwatches" className={styles.mobileNavLink} onClick={() => setIsMobileMenuOpen(false)}>Smartwatches</Link>
-        <Link href="/shop?category=tablets" className={styles.mobileNavLink} onClick={() => setIsMobileMenuOpen(false)}>Tablets</Link>
-        <Link href="/shop?category=workstations" className={styles.mobileNavLink} onClick={() => setIsMobileMenuOpen(false)}>Workstations</Link>
+        <Link href="/shop/category/gaming-pcs" className={styles.mobileNavLink} onClick={() => setIsMobileMenuOpen(false)}>Custom Gaming PCs</Link>
+        <Link href="/shop/category/laptops" className={styles.mobileNavLink} onClick={() => setIsMobileMenuOpen(false)}>Laptops</Link>
+        <Link href="/shop/category/monitors" className={styles.mobileNavLink} onClick={() => setIsMobileMenuOpen(false)}>Monitors</Link>
+        <Link href="/shop/category/pcs" className={styles.mobileNavLink} onClick={() => setIsMobileMenuOpen(false)}>PCs</Link>
+        <Link href="/shop/category/smartphones" className={styles.mobileNavLink} onClick={() => setIsMobileMenuOpen(false)}>Smartphones</Link>
+        <Link href="/shop/category/smartwatches" className={styles.mobileNavLink} onClick={() => setIsMobileMenuOpen(false)}>Smartwatches</Link>
+        <Link href="/shop/category/tablets" className={styles.mobileNavLink} onClick={() => setIsMobileMenuOpen(false)}>Tablets</Link>
+        <Link href="/shop/category/workstations" className={styles.mobileNavLink} onClick={() => setIsMobileMenuOpen(false)}>Workstations</Link>
       </div>
     </>
   );
