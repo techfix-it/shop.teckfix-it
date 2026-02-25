@@ -6,6 +6,8 @@
   padding: 0.75rem 1rem;
   border-radius: 0;
   border-bottom: 1px solid var(--border-200);
+  width: 100%;
+  box-sizing: border-box;
 }
 
 @media (min-width: 768px) {
@@ -78,7 +80,34 @@
   .sort-container {
     gap: 0.75rem;
     width: auto;
-    justify-content: flex-start;
+    justify-content: flex-end; /* Push items right on desktop */
+  }
+}
+
+.controls-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+@media (min-width: 768px) {
+  .controls-group {
+    flex: none;
+    gap: 0.75rem;
+  }
+}
+
+.control-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .control-item {
+    width: auto;
   }
 }
 

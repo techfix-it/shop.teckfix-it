@@ -33,6 +33,7 @@ export default function ShopHeaderActions({
       </div>
       
       <div className="sort-container">
+        {/* Mobile Filter Button */}
         <button 
           className="btn-mobile-filter"
           onClick={() => setIsMobileFiltersOpen(true)}
@@ -41,31 +42,41 @@ export default function ShopHeaderActions({
           <Filter size={20} />
         </button>
 
-        <span className="sort-label hide-on-mobile">Show:</span>
-        <select 
-          className="sort-select"
-          value={productsPerPage}
-          onChange={(e) => setProductsPerPage(Number(e.target.value))}
-        >
-          <option value={24}>24</option>
-          <option value={36}>36</option>
-          <option value={72}>72</option>
-          <option value={144}>144</option>
-        </select>
-        <div className="sort-divider"></div>
-        
-        <span className="sort-label hide-on-mobile">Sort by:</span>
-        <select 
-          className="sort-select"
-          value={sortBy}
-          onChange={(e) => setSortBy(e.target.value)}
-        >
-          <option value="Price: Low to High">Price: Low to High</option>
-          <option value="Price: High to Low">Price: High to Low</option>
-          <option value="Newest Arrivals">Newest Arrivals</option>
-          <option value="Best Reviews">Best Reviews</option>
-        </select>
-        <div className="sort-divider"></div>
+        {/* Filters Group for Show and Sort */}
+        <div className="controls-group">
+          <div className="control-item">
+            <span className="sort-label hide-on-mobile">Show:</span>
+            <select 
+              className="sort-select"
+              value={productsPerPage}
+              onChange={(e) => setProductsPerPage(Number(e.target.value))}
+            >
+              <option value={24}>24</option>
+              <option value={36}>36</option>
+              <option value={72}>72</option>
+              <option value={144}>144</option>
+            </select>
+          </div>
+          
+          <div className="sort-divider hide-on-mobile"></div>
+          
+          <div className="control-item">
+            <span className="sort-label hide-on-mobile">Sort by:</span>
+            <select 
+              className="sort-select"
+              value={sortBy}
+              onChange={(e) => setSortBy(e.target.value)}
+            >
+              <option value="Price: Low to High">Price: Low to High</option>
+              <option value="Price: High to Low">Price: High to Low</option>
+              <option value="Newest Arrivals">Newest Arrivals</option>
+              <option value="Best Reviews">Best Reviews</option>
+            </select>
+          </div>
+        </div>
+
+        <div className="sort-divider hide-on-mobile"></div>
+
         <div className="view-toggles">
           <button 
             className={`view-toggle-btn ${viewType === 'grid' ? 'active' : ''}`}

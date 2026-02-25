@@ -8,6 +8,21 @@ import ShopHeaderActions from '@/components/shop_components/ShopHeaderActions';
 import ProductGrid from '@/components/shop_components/ProductGrid';
 import SidebarFilters from '@/components/shop_components/SidebarFilters';
 import mockProducts from '@/app/api/test/mock/mock_products.json';
+import mockCategorias from '@/app/api/test/mock/mock_categorias.json';
+
+const ALL_GLOBAL_BRANDS = Array.from(new Set(
+  Object.values(mockCategorias.global_brands_session).flat().map((b: any) => b.name)
+));
+
+const doesProductMatchBrand = (product: any, brand: string) => {
+  if (product.brand === brand) return true;
+  const titleLower = product.title.toLowerCase();
+  if (titleLower.includes(brand.toLowerCase())) return true;
+  if (brand === 'NVIDIA' && (titleLower.includes('geforce') || titleLower.includes('rtx'))) return true;
+  if (brand === 'Apple' && (titleLower.includes('macbook') || titleLower.includes('ipad'))) return true;
+  if (brand === 'Ubiquiti' && titleLower.includes('unifi')) return true;
+  return false;
+};
 
 export default function ShopClient() {
   const [viewType, setViewType] = useState<'grid' | 'list'>('grid');
@@ -20,6 +35,78 @@ export default function ShopClient() {
   const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
   const [selectedCondition, setSelectedCondition] = useState<string>('');
   const [selectedBrands, setSelectedBrands] = useState<string[]>([]);
+
+  const parsePrice = (priceStr: string | undefined | null) => {
+    if (!priceStr) return 0; // Se não houver preço, retorna 0 em vez de quebrar
+    // Garante que é string e remove símbolos
+    return parseFloat(String(priceStr).replace(/[^0-9.-]+/g, '')) || 0;
+  };
+
+  // Calculate available facets dynamically
+  const getAvailableBrands = () => {
+    const brands = new Set<string>();
+    mockProducts.forEach(product => {
+      const priceValue = parsePrice(product.currentPrice);
+      if (priceValue > priceRange) return;
+      if (selectedCategories.length > 0 && !selectedCategories.includes(product.category_slug)) return;
+      if (selectedCondition) {
+        const isNew = product.badge?.type === 'new';
+        const isRefurbished = product.badge?.type === 'refurbished';
+        if (selectedCondition === 'Brand New' && !isNew) return;
+        if (selectedCondition === 'Certified Refurbished' && !isRefurbished) return;
+      }
+      brands.add(product.brand);
+      ALL_GLOBAL_BRANDS.forEach(brand => {
+        if (doesProductMatchBrand(product, brand)) {
+          brands.add(brand);
+        }
+      });
+    });
+    return brands;
+  };
+
+  const getAvailableCategories = () => {
+    const cats = new Set<string>();
+    mockProducts.forEach(product => {
+      const priceValue = parsePrice(product.currentPrice);
+      if (priceValue > priceRange) return;
+      if (selectedCondition) {
+        const isNew = product.badge?.type === 'new';
+        const isRefurbished = product.badge?.type === 'refurbished';
+        if (selectedCondition === 'Brand New' && !isNew) return;
+        if (selectedCondition === 'Certified Refurbished' && !isRefurbished) return;
+      }
+      if (selectedBrands.length > 0) {
+        let match = false;
+        selectedBrands.forEach(brand => {
+          if (doesProductMatchBrand(product, brand)) match = true;
+        });
+        if (!match) return;
+      }
+      cats.add(product.category_slug);
+    });
+    return cats;
+  };
+
+  const getAvailableConditions = () => {
+    const conds = new Set<string>();
+    mockProducts.forEach(product => {
+      const priceValue = parsePrice(product.currentPrice);
+      if (priceValue > priceRange) return;
+      if (selectedCategories.length > 0 && !selectedCategories.includes(product.category_slug)) return;
+      if (selectedBrands.length > 0) {
+        const matchBrand = selectedBrands.some(brand => doesProductMatchBrand(product, brand));
+        if (!matchBrand) return;
+      }
+      if (product.badge?.type === 'new') conds.add('Brand New');
+      if (product.badge?.type === 'refurbished') conds.add('Certified Refurbished');
+    });
+    return conds;
+  };
+
+  const availableBrands = getAvailableBrands();
+  const availableCategories = getAvailableCategories();
+  const availableConditions = getAvailableConditions();
 
   // Reset page when sorting changes
   // Reset page when sorting or filtering changes
@@ -34,40 +121,39 @@ export default function ShopClient() {
     setSelectedBrands([]);
   };
 
-  const parsePrice = (priceStr: string | undefined | null) => {
-    if (!priceStr) return 0; // Se não houver preço, retorna 0 em vez de quebrar
-    // Garante que é string e remove símbolos
-    return parseFloat(String(priceStr).replace(/[^0-9.-]+/g, '')) || 0;
-  };
-
   const filteredProducts = mockProducts.filter((product) => {
-    const priceValue = parsePrice(product.currentPrice);
-    if (priceValue > priceRange) return false;
+  // 1. Tratamento de Preço (Garante que não dá erro de replace)
+  const price = parsePrice(product.currentPrice);
 
-    if (selectedCategories.length > 0 && !selectedCategories.includes(product.category_slug)) return false;
+  // 2. Filtro de Preço
+  const matchesPrice = price <= priceRange;
 
-    if (selectedCondition) {
-      const isNew = product.badge?.type === 'new';
-      const isRefurbished = product.badge?.type === 'refurbished';
-      if (selectedCondition === 'Brand New' && !isNew) return false;
-      if (selectedCondition === 'Certified Refurbished' && !isRefurbished) return false;
+  // 3. Filtro de Categoria (Usando o slug do novo JSON)
+  const matchesCategory =
+    selectedCategories.length === 0 ||
+    selectedCategories.includes(product.category_slug);
+
+  // 4. Filtro de Marca (Verificação usando helper robusto com global_brands_session)
+  const matchesBrand =
+    selectedBrands.length === 0 || 
+    selectedBrands.some(brand => doesProductMatchBrand(product, brand));
+
+  // 5. Filtro de Condição (Mantendo sua lógica original adaptada ao novo JSON)
+  let matchesCondition = true;
+  if (selectedCondition) {
+    const isNew = product.badge?.type === 'new';
+    const isRefurbished = product.badge?.type === 'condition grade-a'; // ou 'refurbished' dependendo do seu JSON
+    
+    if (selectedCondition === 'Brand New') {
+      matchesCondition = isNew;
+    } else if (selectedCondition === 'Certified Refurbished') {
+      matchesCondition = isRefurbished;
     }
+  }
 
-    if (selectedBrands.length > 0) {
-      const titleLower = product.title.toLowerCase();
-      const matchBrand = selectedBrands.some(brand => {
-        if (brand === 'Intel' && titleLower.includes('intel')) return true;
-        if (brand === 'NVIDIA' && (titleLower.includes('nvidia') || titleLower.includes('geforce') || titleLower.includes('rtx'))) return true;
-        if (brand === 'Apple' && (titleLower.includes('apple') || titleLower.includes('macbook') || titleLower.includes('ipad'))) return true;
-        if (brand === 'Ubiquiti' && (titleLower.includes('ubiquiti') || titleLower.includes('unifi'))) return true;
-        if (brand === 'Dell' && (titleLower.includes('dell') || titleLower.includes('alienware'))) return true;
-        return false;
-      });
-      if (!matchBrand) return false;
-    }
-
-    return true;
-  });
+  // Retorna true apenas se passar em todos os filtros
+  return matchesPrice && matchesCategory && matchesBrand && matchesCondition;
+});
 
   const sortedProducts = [...filteredProducts].sort((a, b) => {
     switch (sortBy) {
@@ -120,6 +206,9 @@ export default function ShopClient() {
           clearFilters={clearFilters}
           isOpen={isMobileFiltersOpen}
           setIsOpen={setIsMobileFiltersOpen}
+          availableBrands={availableBrands}
+          availableCategories={availableCategories}
+          availableConditions={availableConditions}
         />
 
         {/* Product Grid Area */}

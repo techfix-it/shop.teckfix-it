@@ -97,11 +97,11 @@
 }
 
 .filter-list {
-  display: flex;
+ display: flex;
   flex-direction: column;
-  gap: 0.75rem;
-  max-height: 15rem;
-  overflow-y: auto;
+  gap: 0.5rem;
+  max-height: 400px; /* Limita o tamanho */
+  overflow-y: auto;  /* Adiciona scroll se necessário */
   padding-right: 0.5rem;
 }
 
@@ -114,8 +114,8 @@
   border-radius: 4px;
 }
 .filter-list::-webkit-scrollbar-thumb {
-  background: var(--border-300); 
-  border-radius: 4px;
+  background: var(--border-200); 
+  border-radius: 10px;
 }
 
 .filter-item {
@@ -130,9 +130,9 @@
   width: 1.125rem;
   height: 1.125rem;
   border-radius: 0.25rem;
-  border: 1px solid var(--border-300);
+  border: 2px solid var(--border-400, #94a3b8);
   appearance: none; /* remove native styling */
-  background-color: var(--bg-white);
+  background-color: var(--bg-white, #ffffff);
   cursor: pointer;
   flex-shrink: 0;
   position: relative;
@@ -140,6 +140,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.filter-item.disabled {
+  display: none;
 }
 
 .filter-checkbox:checked {

@@ -4,6 +4,8 @@ import PriceRangeFilter from './PriceRangeFilter';
 import CategoryFilter from './CategoryFilter';
 import ConditionFilter from './ConditionFilter';
 import BrandFilter from './BrandFilter';
+import mockCategorias from '@/app/api/test/mock/mock_categorias.json';
+import mockProducts from '@/app/api/test/mock/mock_products.json';
 
 interface SidebarFiltersProps {
   priceRange: number;
@@ -17,17 +19,24 @@ interface SidebarFiltersProps {
   clearFilters: () => void;
   isOpen: boolean;
   setIsOpen: (val: boolean) => void;
+  availableBrands: Set<string>;
+  availableCategories: Set<string>;
+  availableConditions: Set<string>;
 }
 
-const CATEGORIES = [
-  { label: 'Processors (CPUs)', value: 'PROCESSORS' },
-  { label: 'Graphics Cards (GPUs)', value: 'GRAPHICS CARDS' },
-  { label: 'Laptops & MacBooks', value: 'LAPTOPS' },
-  { label: 'Networking Gear', value: 'NETWORKING' },
-  { label: 'Servers', value: 'SERVERS' },
-];
+const CATEGORIES_GROUPED = mockCategorias.menu_categories.map(cat => ({
+  category: cat.category,
+  subcategories: cat.subcategories.map(sub => ({
+    label: sub.name,
+    value: sub.category_slug
+  }))
+}));
 
-const BRANDS = ['Intel', 'NVIDIA', 'Apple', 'Ubiquiti', 'Dell'];
+const GLOBAL_BRANDS = Array.from(new Set(
+  Object.values(mockCategorias.global_brands_session).flat().map((b: any) => b.name)
+));
+const ALL_PRODUCT_BRANDS = Array.from(new Set(mockProducts.map(p => p.brand)));
+const BRANDS = Array.from(new Set([...ALL_PRODUCT_BRANDS, ...GLOBAL_BRANDS])).sort();
 
 export default function SidebarFilters({
   priceRange,
@@ -40,7 +49,10 @@ export default function SidebarFilters({
   setSelectedBrands,
   clearFilters,
   isOpen,
-  setIsOpen
+  setIsOpen,
+  availableBrands,
+  availableCategories,
+  availableConditions
 }: SidebarFiltersProps) {
 
   const toggleCategory = (cat: string) => {
@@ -77,16 +89,10 @@ export default function SidebarFilters({
       <div className="filter-divider"></div>
 
       <CategoryFilter 
-        categories={CATEGORIES} 
+        categoriesGrouped={CATEGORIES_GROUPED} 
         selectedCategories={selectedCategories} 
         toggleCategory={toggleCategory} 
-      />
-
-      <div className="filter-divider"></div>
-
-      <ConditionFilter 
-        selectedCondition={selectedCondition} 
-        setSelectedCondition={setSelectedCondition} 
+        availableCategories={availableCategories} 
       />
 
       <div className="filter-divider"></div>
@@ -95,7 +101,18 @@ export default function SidebarFilters({
         brands={BRANDS} 
         selectedBrands={selectedBrands} 
         toggleBrand={toggleBrand} 
+        availableBrands={availableBrands} 
       />
+
+      <div className="filter-divider"></div>
+
+      <ConditionFilter 
+        selectedCondition={selectedCondition} 
+        setSelectedCondition={setSelectedCondition} 
+        availableConditions={availableConditions} 
+      />
+
+    
 
       <button className="btn-clear-filters" onClick={clearFilters}>Clear All Filters</button>
     </aside>
