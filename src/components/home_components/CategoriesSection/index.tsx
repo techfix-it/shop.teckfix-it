@@ -53,7 +53,7 @@ export default function CategoriesSection() {
       <div className="home-container">
         <div className="section-header">
           <h2 className="section-title">Shop by Category</h2>
-          <Link href="/shop" className="view-all-link">
+          <Link href="/categories" className="view-all-link">
             View All Categories <ArrowRight size={16} />
           </Link>
         </div>

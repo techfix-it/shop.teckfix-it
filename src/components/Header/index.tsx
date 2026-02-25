@@ -47,6 +47,7 @@ export default function Header() {
             <nav className={styles.desktopNav}>
               <Link href="/" className={styles.navLink}>Home</Link>
               <Link href="/shop" className={styles.navLink}>Shop</Link>
+              <Link href="/categories" className={styles.navLink} style={{ color: 'var(--primary-400)', fontWeight: 'bold' }}>All Categories</Link>
               <Link href="/shop/category/gaming-pcs" className={styles.navLink}>Custom Gaming PCs</Link>
               <Link href="/shop/category/laptops" className={styles.navLink}>Laptops</Link>
               <Link href="/shop/category/monitors" className={styles.navLink}>Monitors</Link>
@@ -121,6 +122,7 @@ export default function Header() {
       <div className={`${styles.mobileNav} ${isMobileMenuOpen ? styles.mobileNavOpen : ''}`}>
         <Link href="/" className={styles.mobileNavLink} onClick={() => setIsMobileMenuOpen(false)}>Home</Link>
         <Link href="/shop" className={styles.mobileNavLink} onClick={() => setIsMobileMenuOpen(false)}>Shop</Link>
+        <Link href="/categories" className={styles.mobileNavLink} onClick={() => setIsMobileMenuOpen(false)} style={{ color: 'var(--primary-500)' }}>All Categories</Link>
         <Link href="/shop/category/gaming-pcs" className={styles.mobileNavLink} onClick={() => setIsMobileMenuOpen(false)}>Custom Gaming PCs</Link>
         <Link href="/shop/category/laptops" className={styles.mobileNavLink} onClick={() => setIsMobileMenuOpen(false)}>Laptops</Link>
         <Link href="/shop/category/monitors" className={styles.mobileNavLink} onClick={() => setIsMobileMenuOpen(false)}>Monitors</Link>
