@@ -85,6 +85,9 @@
 
 /* Sections */
 section {
+  padding: 4rem 0;
+}
+.shop-content {
   padding: 0 0;
 }
 
