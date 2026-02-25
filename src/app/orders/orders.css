@@ -1,0 +1,318 @@
+/* Orders Page Layout */
+.orders-content {
+  background: var(--bg-white);
+  border-radius: var(--radius-xl);
+  padding: 2.5rem;
+  box-shadow: var(--shadow-md);
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.orders-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border-200);
+}
+
+.orders-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--text-900);
+}
+
+.orders-filter-group {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.orders-filter-label {
+  font-size: 0.85rem;
+  color: var(--text-500);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.orders-filter-select {
+  padding: 0.6rem 2.5rem 0.6rem 1rem;
+  border: 1px solid var(--border-200);
+  border-radius: var(--radius-md);
+  background-color: var(--bg-50);
+  color: var(--text-800);
+  font-size: 0.9rem;
+  font-family: inherit;
+  font-weight: 500;
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 1rem;
+  outline: none;
+  transition: all 0.2s;
+}
+
+.orders-filter-select:hover, .orders-filter-select:focus {
+  border-color: var(--primary-400);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+/* Action Bar */
+.orders-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.orders-search {
+  position: relative;
+  flex: 1;
+  max-width: 400px;
+}
+
+.orders-search-icon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-400);
+  font-size: 1.25rem;
+  pointer-events: none;
+}
+
+.orders-search input {
+  width: 100%;
+  padding: 0.75rem 1rem 0.75rem 2.75rem;
+  border: 1px solid var(--border-200);
+  border-radius: var(--radius-lg);
+  font-size: 0.95rem;
+  color: var(--text-900);
+  transition: all 0.2s;
+}
+
+.orders-search input:focus {
+  outline: none;
+  border-color: var(--primary-500);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.orders-quick-filters {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.btn-filter, .btn-filter-active {
+  padding: 0.6rem 1.25rem;
+  border-radius: var(--radius-full);
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: none;
+}
+
+.btn-filter {
+  background: var(--bg-100);
+  color: var(--text-600);
+}
+
+.btn-filter:hover {
+  background: var(--bg-200);
+  color: var(--text-900);
+}
+
+.btn-filter-active {
+  background: var(--primary-50);
+  color: var(--primary-600);
+  box-shadow: inset 0 0 0 1px var(--primary-200);
+}
+
+/* Table container */
+.orders-table-container {
+  overflow-x: auto;
+  margin-bottom: 2rem;
+}
+
+.orders-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  text-align: left;
+}
+
+.orders-table th {
+  padding: 1rem 1.25rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--text-500);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 1px solid var(--border-200);
+  white-space: nowrap;
+}
+
+.orders-table th:last-child {
+  text-align: right;
+}
+
+.orders-table td {
+  padding: 1.25rem;
+  font-size: 0.95rem;
+  color: var(--text-800);
+  border-bottom: 1px solid var(--border-100);
+  vertical-align: middle;
+}
+
+.orders-table tr:last-child td {
+  border-bottom: none;
+}
+
+.order-id {
+  font-weight: 700;
+  color: var(--text-900);
+}
+
+.order-date {
+  color: var(--text-600);
+}
+
+.order-total {
+  font-weight: 600;
+  color: var(--text-900);
+}
+
+.order-action {
+  text-align: right;
+}
+
+.btn-view-details {
+  background: none;
+  border: none;
+  color: var(--primary-600);
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: color 0.2s;
+  padding: 0.5rem;
+}
+
+.btn-view-details:hover {
+  color: var(--primary-800);
+  text-decoration: underline;
+}
+
+/* Badges */
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--radius-full);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+.status-badge.delivered {
+  background: rgba(16, 185, 129, 0.1);
+  color: #059669;
+}
+
+.status-badge.shipped {
+  background: rgba(59, 130, 246, 0.1);
+  color: #2563eb;
+}
+
+.status-badge.processing {
+  background: rgba(139, 92, 246, 0.1);
+  color: #6d28d9;
+}
+
+.status-badge.cancelled {
+  background: rgba(239, 68, 68, 0.1);
+  color: #dc2626;
+}
+
+/* Pagination */
+.orders-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-200);
+}
+
+.pagination-info {
+  font-size: 0.9rem;
+  color: var(--text-500);
+}
+
+.pagination-info strong {
+  color: var(--text-900);
+  font-weight: 600;
+}
+
+.pagination-controls {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.page-btn {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border-200);
+  background: var(--bg-white);
+  border-radius: var(--radius-md);
+  color: var(--text-600);
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.page-btn:hover:not(:disabled) {
+  background: var(--bg-50);
+  border-color: var(--border-300);
+  color: var(--text-900);
+}
+
+.page-btn.active {
+  background: var(--primary-600);
+  border-color: var(--primary-600);
+  color: white;
+}
+
+.page-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background: var(--bg-50);
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .orders-actions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .orders-search {
+    width: 100%;
+    max-width: none;
+  }
+  
+  .orders-quick-filters {
+    width: 100%;
+    overflow-x: auto;
+    padding-bottom: 0.5rem;
+  }
+}

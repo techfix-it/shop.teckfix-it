@@ -1,12 +1,12 @@
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import PaymentMethodsClient from './PaymentMethodsClient';
+import OrdersClient from './OrdersClient';
 
-export default function PaymentMethodsPage() {
+export default function OrdersPage() {
   return (
     <>
       <Header />
-      <PaymentMethodsClient />
+      <OrdersClient />
       <Footer />
     </>
   );

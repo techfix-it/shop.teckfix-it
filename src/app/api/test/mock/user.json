@@ -1,0 +1,89 @@
+{
+  "user": {
+    "id": "USR-984421",
+    "name": "Alex Rivera",
+    "email": "alex.rivera@techfix.com",
+    "phone": "+353 1 234 5678",
+    "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuBLH8UZATdMFmP1ssIDn9gpqa5p7oE78nfWoHxQGxeIJ-bZvCuaf5dxvGFNB3M-qQUUAldjXzaVjpKhFjwHITsAVb3rg25IKFwTBvVI4jJY_VuWCXPzB7sdV6MFFHfuTiu5RG_y43TMmQQCZXM1Ie4p1xg7HWrxqL-HZ1qTyJkuXZHZZs235d28f0qvoRTC7l_yKAJsdslUtkTZTOc-QXC_y8ynAAXtwDKUVLsKr_M3LZSbs75S6fIX0fFDeE39wynHn0V6za34KKLb",
+    "membership": {
+      "status": "Active Member",
+      "type": "Standard Member",
+      "since": "2023"
+    },
+    "security": {
+      "twoFactorEnabled": false,
+      "lastPasswordChange": "2023-08-15"
+    }
+  },
+  "paymentMethods": [
+    {
+      "id": "pm_001",
+      "brand": "Visa",
+      "last4": "4242",
+      "expiry": "12/26",
+      "holderName": "Alex Rivera",
+      "isDefault": true,
+      "icon": "https://lh3.googleusercontent.com/aida-public/AB6AXuBgrAOgAbUXvS_C2K3PMSaeSbShoOTHhtgndqx7XpdkycVY91MDif31OfJbAal2VKoO6oeUXCOL7UVDV4tuI8tEZQaq1onpw7WDHQ99_GetI1Y83nOIEl9SAU4UHPRRsEkR3YC6fl15N5exznT06XwqIVptrMhqvTy4buv3x820-Ykx027blLK-GREIVqn1Ze6vLGjQJoji3AcGPRV9DtyEm7s4t-jp8HzIUxcBcg9-OB7j20-SH-_Rb560ZkOIwnfBeZYbK6OaZvE-"
+    },
+    {
+      "id": "pm_002",
+      "brand": "Mastercard",
+      "last4": "8888",
+      "expiry": "05/25",
+      "holderName": "Alex Rivera",
+      "isDefault": false,
+      "icon": "https://lh3.googleusercontent.com/aida-public/AB6AXuBtGY5omK4dFLN2kxpzoVJU077MsgtFFY6DxEVkiXyUfLtxheXiCfEX_yMZP_vPNBuSPG2XdPq8j0gYlYNqf7U0zwaAQDxMdmLQuA2dI5tKqo1Zc3-Pb4qg3sbt37DfzOOdQUnI4zKz-SRPePJW-v1dSXHfQ4DCEPmT-rzpinNTxB7xXATbVrECZNID2RrGU-IoTuc4WEIgkQwe68sSIgZXyHrYCDQywsm9bhK_3n6ACosMrpexGUcchV8thurpWCKiQvQUIRyoYRa7"
+    }
+  ],
+  "addresses": [
+    {
+      "id": "addr_001",
+      "label": "Primary Residence",
+      "fullName": "Alex Rivera",
+      "street": "10 O'Connell Street Lower",
+      "city": "Dublin",
+      "state": "Co. Dublin",
+      "zipCode": "D01 YX29",
+      "country": "Ireland",
+      "isDefault": true,
+      "mapThumbnail": "https://lh3.googleusercontent.com/aida-public/AB6AXuDNr4KwWeeEZulcp68y0e6-w_3zfiyWTAYyLj4SB2hRgfwuvJjLTWqumQRSPtgZ_udNMA5n86U011n9zteH7NM91I-tV9Rq4eRJmx-7ZRahJcjLDhnX5pYfJ1VgithSJ3LgfI62a3UxsypzwaDBODMa75fx4fPJQn11paZ0AJJ6Ow47gvixD3pC7G7YE-dq9u7LIYpQYbAxEX9T4Ihz8f8z0O2jPgOXdgwkC6QiDKkiAowcrzrJOVTfrHX3zivtOfi5xi8b2gfSfsRb"
+    },
+    {
+      "id": "addr_002",
+      "label": "Cork Branch Office",
+      "fullName": "Jane Smith",
+      "street": "12 Patrick Street",
+      "city": "Cork",
+      "state": "Co. Cork",
+      "zipCode": "T12 K72X",
+      "country": "Ireland",
+      "isDefault": false,
+      "mapThumbnail": "https://lh3.googleusercontent.com/aida-public/AB6AXuCbJKbMAik7j2aTYI9rWBRMpyqu4s0Qvx2bGgB9xO1kMrWcYUH5cD2TMw1lsZolkNiB89zGD8wzLtA1Hu8CXKXgeuttic0IofAOIRFXZadx9w9bq3VIc8-5PJLHQ5mkk0fMQo3J0DsW99s0ygXH_iHcpj8jfWr2BtILHetHZ-SiCy6DPMF50wTX2t_-NuNnUsV2TS7p7y7DhtOzzr4my-wyFgwm1plZrE0m1FwimVIucfVfu3rzs_dS5rDZiDn14pVFxnm3MR1Kz2IB"
+    }
+  ],
+  "orders": [
+    {
+      "id": "#TF-98234",
+      "date": "2023-10-24",
+      "status": "Delivered",
+      "total": 249.00,
+      "currency": "€",
+      "trackingNumber": "TRK8829103"
+    },
+    {
+      "id": "#TF-97811",
+      "date": "2023-10-21",
+      "status": "Shipped",
+      "total": 1299.50,
+      "currency": "€",
+      "trackingNumber": "TRK7712290"
+    },
+    {
+      "id": "#TF-97600",
+      "date": "2023-10-18",
+      "status": "Processing",
+      "total": 85.20,
+      "currency": "€"
+    }
+  ]
+}

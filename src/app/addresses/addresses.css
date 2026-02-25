@@ -1,50 +1,66 @@
-/* Payment Methods Page Styles */
-.payment-content {
+/* Addresses Page Styles */
+.addresses-content {
   flex: 1;
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
 
-.payment-header {
+.addresses-header {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
 
 @media (min-width: 640px) {
-  .payment-header {
+  .addresses-header {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
   }
 }
 
-.payment-title {
+.addresses-title {
   font-size: 1.5rem;
   font-weight: 800;
   color: var(--text-900);
   margin-bottom: 0.25rem;
 }
 
-.payment-subtitle {
+.addresses-subtitle {
   color: var(--text-500);
   font-size: 0.875rem;
 }
 
-.payment-grid {
+.btn-primary {
+  background-color: #2563eb;
+  color: white;
+  padding: 0.625rem 1.25rem;
+  border-radius: var(--radius-lg);
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.2);
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+.addresses-grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1.5rem;
 }
 
 @media (min-width: 768px) {
-  .payment-grid {
+  .addresses-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-.payment-card {
+.address-card {
   background-color: var(--bg-white);
   border: 1px solid var(--border-200);
   border-radius: var(--radius-xl);
@@ -52,15 +68,14 @@
   display: flex;
   flex-direction: column;
   transition: border-color 0.2s, box-shadow 0.2s;
-  min-height: 14rem;
 }
 
-.payment-card:hover {
+.address-card:hover {
   border-color: #2563eb;
   box-shadow: var(--shadow-sm);
 }
 
-.payment-card-header {
+.address-card-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -78,80 +93,94 @@
   text-transform: uppercase;
 }
 
-.payment-card-actions {
+.address-card-actions {
   display: flex;
   gap: 0.5rem;
   margin-left: auto; /* Push to right if no badge */
 }
 
-.payment-card-body {
-  padding: 1rem 1.5rem 1.5rem 1.5rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  flex: 1;
-}
-
-.payment-brand-section {
-  display: flex;
-  align-items: center;
-  gap: 1.25rem;
-}
-
-.payment-icon-wrapper {
-  width: 4rem;
-  height: 2.5rem;
-  border-radius: 0.25rem;
-  background-color: var(--bg-50);
+.icon-btn {
+  background: none;
+  border: none;
+  color: var(--text-400);
+  cursor: pointer;
+  padding: 0.25rem;
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 0.25rem;
+  transition: color 0.2s, background-color 0.2s;
+}
+
+.icon-btn:hover {
+  color: var(--text-900);
+  background-color: var(--bg-100);
+}
+
+.address-card-body {
+  padding: 1rem 1.5rem 1.5rem 1.5rem;
+}
+
+.address-name {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--text-900);
+  margin-bottom: 0.75rem;
+}
+
+.address-lines {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  color: var(--text-500);
+  font-size: 0.875rem;
+}
+
+.address-line {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.address-line.no-icon {
+  padding-left: 1.5rem; /* Align with text that has icon */
+}
+
+.address-icon {
+  color: #94a3b8;
+  margin-top: 0.1rem;
+  flex-shrink: 0;
+}
+
+.address-map-container {
+  height: 5rem;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  margin: 0 1.5rem 1.5rem 1.5rem;
+  border-radius: var(--radius-lg);
   overflow: hidden;
   border: 1px solid var(--border-100);
 }
 
-.payment-icon-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.payment-icon {
-  color: var(--text-400);
-}
-
-.payment-brand {
-  font-size: 1.125rem;
-  font-weight: 700;
-  color: var(--text-900);
-  margin-bottom: 0.1rem;
-}
-
-.payment-expiry {
-  font-size: 0.875rem;
-  color: var(--text-500);
-}
-
-.payment-holder {
+.map-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.4);
   display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
-  margin-top: auto;
-  border-top: 1px solid var(--border-100);
-  padding-top: 1rem;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(1px);
 }
 
-.holder-label {
-  font-size: 0.75rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  color: var(--text-400);
-  letter-spacing: 0.05em;
-}
-
-.holder-name {
-  font-weight: 600;
+.map-city-name {
   color: var(--text-900);
+  font-weight: 700;
+  font-size: 0.875rem;
+  text-shadow: 0 0 4px white;
 }
 
 /* Add New Card */

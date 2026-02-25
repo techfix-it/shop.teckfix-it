@@ -32,11 +32,11 @@
   width: 3rem;
   height: 3rem;
   border-radius: var(--radius-xl);
-  background-color: var(--border-primary-10);
+  background-color: #eff6ff;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--primary);
+  color: #2563eb;
 }
 
 .user-quick-name {
@@ -75,19 +75,18 @@
 }
 
 .nav-item.active {
-  background-color: var(--primary);
+  background-color: #2563eb;
   color: white;
   font-weight: 500;
-  box-shadow: 0 4px 6px -1px rgba(236, 91, 19, 0.2);
+  box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.2);
 }
 
-.nav-item .material-symbols-outlined {
-  font-size: 1.25rem;
+.nav-icon {
   transition: color 0.2s;
 }
 
-.nav-item:not(.active):hover .material-symbols-outlined {
-  color: var(--primary);
+.nav-item:not(.active):hover .nav-icon {
+  color: #2563eb;
 }
 
 .nav-divider {
@@ -105,11 +104,11 @@
 }
 
 .sidebar-support-card {
-  background-color: var(--primary);
+  background-color: #2563eb;
   border-radius: var(--radius-xl);
   padding: 1.5rem;
   color: white;
-  box-shadow: 0 10px 15px -3px rgba(236, 91, 19, 0.3);
+  box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.3);
 }
 
 .support-icon {
@@ -136,7 +135,7 @@
   padding: 0.625rem;
   border-radius: var(--radius-lg);
   background-color: white;
-  color: var(--primary);
+  color: #2563eb;
   font-size: 0.875rem;
   font-weight: 700;
   border: none;
