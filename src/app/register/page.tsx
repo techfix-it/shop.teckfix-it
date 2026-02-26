@@ -1,12 +1,10 @@
 'use client';
-import { Mail, Lock, Eye, CheckCircle2, ShieldCheck } from 'lucide-react';
-import './login.css';
+import { User, Mail, Lock, Eye, CheckCircle2, ShieldCheck } from 'lucide-react';
+import '../login/login.css';
 
-export default function Login() {
+export default function Register() {
   return (
     <>
-
-      {/* Main Content Area */}
       <main className="auth-layout">
         <div className="auth-bg-shape-1"></div>
         <div className="auth-bg-shape-2"></div>
@@ -14,11 +12,19 @@ export default function Login() {
         <div className="auth-container">
           <div className="auth-card">
             <div className="auth-header">
-              <h2 className="auth-title">Welcome Back</h2>
-              <p className="auth-subtitle">Login to your TechFix-It account to manage your repairs and track progress.</p>
+              <h2 className="auth-title">Create an Account</h2>
+              <p className="auth-subtitle">Join TechFix-It to manage your repairs and track progress.</p>
             </div>
 
             <form onSubmit={(e) => e.preventDefault()}>
+              <div className="form-group">
+                <label className="form-label" htmlFor="name">Full Name</label>
+                <div className="input-wrapper">
+                  <User className="input-icon" size={20} />
+                  <input className="form-input" id="name" name="name" placeholder="John Doe" type="text" />
+                </div>
+              </div>
+
               <div className="form-group">
                 <label className="form-label" htmlFor="email">Email Address</label>
                 <div className="input-wrapper">
@@ -28,10 +34,7 @@ export default function Login() {
               </div>
 
               <div className="form-group">
-                <div className="form-label-row">
-                  <label className="form-label" htmlFor="password">Password</label>
-                  <a className="forgot-password" href="/forgot-password">Forgot Password?</a>
-                </div>
+                <label className="form-label" htmlFor="password">Password</label>
                 <div className="input-wrapper">
                   <Lock className="input-icon" size={20} />
                   <input className="form-input" id="password" name="password" placeholder="••••••••" type="password" />
@@ -42,12 +45,12 @@ export default function Login() {
               </div>
 
               <div className="form-group form-checkbox-group">
-                <input className="form-checkbox" id="remember" type="checkbox" />
-                <label className="form-checkbox-label" htmlFor="remember">Remember this device</label>
+                <input className="form-checkbox" id="terms" type="checkbox" />
+                <label className="form-checkbox-label" htmlFor="terms">I agree to the Terms & Conditions</label>
               </div>
 
               <button className="btn-primary" type="submit">
-                Login
+                Sign Up
               </button>
 
               <div className="divider">
@@ -82,8 +85,8 @@ export default function Login() {
 
             <div className="auth-footer">
               <p>
-                Don't have an account yet? 
-                <a href="/register">Sign up for free</a>
+                Already have an account? 
+                <a href="/login">Login here</a>
               </p>
             </div>
           </div>
@@ -91,7 +94,7 @@ export default function Login() {
           <div className="trust-badges">
             <div className="trust-badge">
               <CheckCircle2 size={16} />
-              <span>Secure Login</span>
+              <span>Secure Registration</span>
             </div>
             <div className="trust-badge">
               <ShieldCheck size={16} />

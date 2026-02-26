@@ -3,6 +3,8 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { CartProvider } from "@/context/CartContext";
 import { Analytics } from "@vercel/analytics/next";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "TechFix-It | Shop & Reparações",
@@ -23,7 +25,9 @@ export default function RootLayout({
       <body>
         <CartProvider>
           <ThemeProvider attribute="data-theme" defaultTheme="light" enableSystem>
+            <Header />
             {children}
+            <Footer />
             <Analytics />
           </ThemeProvider>
         </CartProvider>
